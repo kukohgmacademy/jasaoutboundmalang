@@ -4,4 +4,4 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemaps
-Sitemap: https://jasaoutboundmalang.com/sitemap.xml
+Sitemap: https://jasaoutboundmalang.web.id/sitemap.xml
