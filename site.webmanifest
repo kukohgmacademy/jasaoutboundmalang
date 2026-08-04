@@ -1,0 +1,21 @@
+{
+  "name": "Jasa Outbound Malang & Batu - Gemilang Katun Outbound",
+  "short_name": "Jasa Outbound",
+  "description": "Provider Outbound Pantai, Retreat Direksi, Rapat Strategi, dan Penyelenggara Team Building Terpercaya di Malang & Batu.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000080",
+  "icons": [
+    {
+      "src": "assets/img/jasaoutboundmalang.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "assets/img/jasaoutboundmalang.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
