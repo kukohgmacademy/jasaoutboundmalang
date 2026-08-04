@@ -1,0 +1,514 @@
+/* =========================================================
+   KAWANANTARA OUTBOUND - CORE STYLE SHEET
+   Theme: Nature Outdoor Vendor Premium
+   ========================================================= */
+
+    :root {
+      --primary-color: #000080;
+      --primary-hover: #00005C;
+      --accent-color: #800000;
+      --accent-hover: #990000;
+      --gold-color: #FFC107;
+      --bg-light: #F8F9FA;
+      --text-dark: #1E293B;
+      --text-muted: #64748B;
+      --heading-font: 'Outfit', sans-serif;
+      --body-font: 'Plus Jakarta Sans', sans-serif;
+    }
+
+/* Base & Smooth Scroll Setup */
+html {
+  scroll-behavior: smooth; /* Membuat perpindahan halaman / section jadi sangat halus */
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-dark);
+  background-color: #ffffff;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
+/* --- Top Info Bar --- */
+.top-bar {
+  background-color: var(--primary-hover);
+  color: #E2E8F0;
+  font-size: 0.85rem;
+  padding: 6px 0;
+}
+
+.top-bar a {
+  color: #FCD34D;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.top-bar a:hover {
+  opacity: 0.85;
+}
+
+/* --- Header Navbar --- */
+.header {
+  padding: 12px 0 !important;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+  transition: all 0.3s ease;
+}
+
+.brand-logo-text {
+  font-family: var(--heading-font);
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+.brand-logo-text span {
+  color: var(--accent-color);
+}
+
+.navmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.navmenu a {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.25s ease;
+  position: relative;
+}
+
+.navmenu a:hover, 
+.navmenu a.active {
+  color: var(--primary-color);
+}
+
+.navmenu a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* --- Buttons --- */
+.btn-custom-primary {
+  background-color: var(--primary-color);
+  color: #ffffff !important;
+  border-radius: 50px;
+  padding: 10px 24px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(45, 106, 79, 0.3);
+}
+
+.btn-custom-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 106, 79, 0.4);
+}
+
+.btn-custom-accent {
+  background-color: var(--accent-color);
+  color: #ffffff !important;
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3);
+}
+
+.btn-custom-accent:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
+}
+
+/* --- Hero & Page Title --- */
+.page-title-hero {
+  position: relative;
+  background: linear-gradient(135deg, rgba(15, 41, 30, 0.88), rgba(27, 67, 50, 0.82)), 
+              url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  padding: 90px 0 60px 0;
+  color: #ffffff;
+}
+
+.page-title-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 12px;
+}
+
+.page-title-hero p {
+  color: #F1F5F9 !important;
+  font-size: 1.1rem;
+  max-width: 680px;
+  margin: 0 auto;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.breadcrumbs-bar {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 0;
+  margin-top: 40px;
+}
+
+/* --- Cards & Components --- */
+.light-section {
+  background-color: var(--bg-light) !important;
+}
+
+.modern-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s ease;
+}
+
+.modern-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 40px rgba(45, 106, 79, 0.12);
+  border-color: rgba(45, 106, 79, 0.3);
+}
+
+.package-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(45, 106, 79, 0.12);
+  border-color: rgba(45, 106, 79, 0.3);
+}
+
+.package-img {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.package-card:hover .package-img {
+  transform: scale(1.05);
+}
+
+.price-tag {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  font-family: var(--heading-font);
+}
+
+.badge-populer {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+/* --- Detail Package Components --- */
+.package-header-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  overflow: hidden;
+}
+
+.facility-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid #E2E8F0;
+}
+
+.itinerary-timeline {
+  border-left: 3px solid var(--primary-color);
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+.itinerary-item {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.itinerary-item::before {
+  content: '';
+  position: absolute;
+  left: -27px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-color);
+}
+
+.sticky-sidebar {
+  position: sticky;
+  top: 90px;
+}
+
+.price-text-large {
+  color: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 800;
+}
+
+/* --- Gallery & Filters --- */
+.gallery-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  border: 1px solid #E2E8F0;
+  transition: all 0.35s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(45, 106, 79, 0.12);
+  border-color: rgba(45, 106, 79, 0.3);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(15, 41, 30, 0.9) 0%, rgba(0, 0, 0, 0.2) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.btn-filter {
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-filter:hover,
+.btn-filter.active {
+  background-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.25);
+}
+
+/* --- Contact Section --- */
+.info-card-custom {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.info-card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(45, 106, 79, 0.1);
+  border-color: rgba(45, 106, 79, 0.3);
+}
+
+.info-icon-box {
+  width: 50px;
+  height: 50px;
+  background: var(--bg-light);
+  color: var(--primary-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.form-custom-box {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* --- Footer Section --- */
+.footer {
+  background-color: #0F291E !important;
+  color: #FFFFFF !important;
+  border-top: 5px solid var(--accent-color);
+}
+
+.footer h4 {
+  color: #FFFFFF !important;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+.footer-links a {
+  color: #FFFFFF !important;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  opacity: 0.9;
+}
+
+.footer-links a:hover {
+  color: #FCD34D !important;
+  padding-left: 4px;
+  opacity: 1;
+}
+
+.footer p, .footer span, .footer div {
+  color: #FFFFFF !important;
+}
+
+.mobile-nav-toggle {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .page-title-hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* =========================================================
+       FLOATING WHATSAPP BUTTON 
+       ========================================================= */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 90px; /* Dinaikkan sedikit agar tidak menutupi tombol scroll-top */
+      right: 30px;  /* Posisi diubah ke kanan */
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      color: #FFF;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 32px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      animation: pulse-wa 2s infinite;
+    }
+
+    .floating-whatsapp:hover {
+      background-color: #128C7E;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    /* Animasi berdenyut */
+    @keyframes pulse-wa {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    
+    /* Tooltip Teks "Chat Kami!" */
+    .floating-whatsapp::after {
+      content: "Chat Kami!";
+      position: absolute;
+      right: 75px; /* Tooltip muncul di sebelah kiri ikon */
+      background-color: #ffffff;
+      color: var(--text-dark);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: var(--body-font);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .floating-whatsapp:hover::after {
+      opacity: 1;
+      visibility: visible;
+      right: 80px; /* Efek geser sedikit ke kiri saat di-hover */
+    }
+
+    /* Penyesuaian untuk layar HP (Mobile) */
+    @media (max-width: 768px) {
+      .floating-whatsapp {
+        bottom: 80px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+      }
+      .floating-whatsapp::after {
+        display: none; /* Sembunyikan tooltip di HP */
+      }
+    }
