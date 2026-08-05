@@ -50,7 +50,33 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Cluster Artikel Gathering Per Departemen (Terbaru) -->
+  <!-- Cluster Artikel Outbound Pantai Nginap Bonfire (Terbaru) -->
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/outbound-pantai-nginap-bonfire.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/outbound-pantai-2-hari-1-malam-susunan-acara.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/nginap-tepi-pantai-persiapan-kantor-sebelum-booking.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/memilih-vendor-outbound-pantai-bonfire.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Cluster Artikel Gathering Per Departemen -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/gathering-per-departemen-ide-acara-kecil-divisi.html</loc>
     <lastmod>2026-08-06</lastmod>
