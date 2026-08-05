@@ -3,13 +3,13 @@
   <!-- Root Domain & Halaman Utama Website -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jasaoutboundmalang.web.id/index.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://jasaoutboundmalang.web.id/blog.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -50,7 +50,33 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Artikel Rafting Malang & Tambahan Baru -->
+  <!-- Cluster Artikel Wellness Gathering (Baru) -->
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/wellness-gathering-kantor-yoga-pagi-outbound-siang.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/healing-aktif-karyawan-wellness-gathering-vs-cuti.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/wellness-gathering-kombinasi-tenang-aktif-beda-outbound.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/jadwal-ideal-wellness-gathering-sehari-penuh.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artikel Rafting Malang & Tambahan -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/waktu-terbaik-rafting-malang-berdasarkan-musim.html</loc>
     <lastmod>2026-08-05</lastmod>
