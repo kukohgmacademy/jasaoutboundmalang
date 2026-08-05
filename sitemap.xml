@@ -50,7 +50,33 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Cluster Artikel Wellness Gathering (Baru) -->
+  <!-- Cluster Artikel Gathering Per Departemen (Terbaru) -->
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/gathering-per-departemen-ide-acara-kecil-divisi.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/outbound-skala-kecil-kantor-lebih-gampang-diatur-hr.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/gathering-per-departemen-vs-sekantor-lebih-efektif.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/cara-bagi-budget-gathering-per-departemen.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Cluster Artikel Wellness Gathering -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/wellness-gathering-kantor-yoga-pagi-outbound-siang.html</loc>
     <lastmod>2026-08-06</lastmod>
