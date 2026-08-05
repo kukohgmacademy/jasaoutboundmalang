@@ -14,19 +14,12 @@
   <!-- Canonical Link -->
   <link rel="canonical" href="https://jasaoutboundmalang.web.id/blog.html">
 
-  <!-- Open Graph / Facebook / WhatsApp Meta Tags -->
+  <!-- Open Graph Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jasaoutboundmalang.web.id/blog.html">
   <meta property="og:title" content="Blog & Artikel Outbound Malang, Rafting & Gathering Pantai - Jasa Outbound Malang">
   <meta property="og:description" content="Kumpulan artikel, tips outbound pantai, waktu terbaik rafting Malang, games tanpa basah-basahan, rapat strategi direksi, dan panduan gathering dari Jasa Outbound Malang.">
   <meta property="og:image" content="https://jasaoutboundmalang.web.id/assets/img/jasaoutboundmalang.webp">
-
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://jasaoutboundmalang.web.id/blog.html">
-  <meta name="twitter:title" content="Blog & Artikel Outbound Malang, Rafting & Gathering Pantai - Jasa Outbound Malang">
-  <meta name="twitter:description" content="Kumpulan artikel, tips outbound pantai, waktu terbaik rafting Malang, games tanpa basah-basahan, rapat strategi direksi, dan panduan gathering dari Jasa Outbound Malang.">
-  <meta name="twitter:image" content="https://jasaoutboundmalang.web.id/assets/img/jasaoutboundmalang.webp">
 
   <!-- Favicons -->
   <link href="assets/img/jasaoutboundmalang.webp" rel="icon">
@@ -41,8 +34,6 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main Unified CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -53,33 +44,19 @@
       --primary-hover: #00005C;
       --accent-color: #800000;
       --accent-hover: #990000;
-      --gold-color: #FFC107;
       --bg-light: #F8F9FA;
       --text-dark: #1E293B;
-      --text-muted: #64748B;
       --heading-font: 'Outfit', sans-serif;
       --body-font: 'Plus Jakarta Sans', sans-serif;
-    }
-
-    html, body {
-      width: 100%;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
     }
 
     body {
       font-family: var(--body-font);
       color: var(--text-dark);
       background-color: #ffffff;
-      -webkit-tap-highlight-color: transparent;
+      scroll-behavior: smooth;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: var(--heading-font);
-      word-break: break-word;
-    }
-
-    /* Top Bar & Header */
     .top-bar {
       background-color: var(--primary-color);
       color: #E2E8F0;
@@ -96,7 +73,6 @@
       padding: 10px 0 !important;
       background: #ffffff;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
-      transition: all 0.3s ease;
     }
 
     .brand-logo-text {
@@ -104,7 +80,6 @@
       font-weight: 800;
       font-size: clamp(1.2rem, 4vw, 1.6rem);
       color: var(--primary-color);
-      white-space: nowrap;
     }
 
     .brand-logo-text span {
@@ -125,39 +100,16 @@
       font-weight: 600;
       font-size: 0.95rem;
       text-decoration: none;
-      transition: color 0.25s ease;
-      position: relative;
     }
 
     @media (min-width: 1200px) {
-      .mobile-nav-toggle {
-        display: none !important;
-      }
-      .navmenu ul {
-        display: flex !important;
-      }
-      .navmenu a:hover, 
-      .navmenu a.active {
-        color: var(--primary-color);
-      }
-      .navmenu a.active::after {
-        content: '';
-        position: absolute;
-        bottom: -6px;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background-color: var(--accent-color);
-        border-radius: 2px;
-      }
+      .mobile-nav-toggle { display: none !important; }
+      .navmenu ul { display: flex !important; }
+      .navmenu a:hover, .navmenu a.active { color: var(--primary-color); }
     }
 
     @media (max-width: 1199px) {
-      .navmenu {
-        margin-left: auto !important;
-        margin-right: 0 !important;
-      }
-
+      .navmenu { margin-left: auto !important; }
       .navmenu ul {
         display: none;
         position: absolute;
@@ -170,42 +122,14 @@
         flex-direction: column;
         padding: 12px 0;
         z-index: 9999;
-        overflow: hidden;
       }
 
-      .navmenu ul.show-mobile-menu {
-        display: flex !important;
-        animation: slideDownMenu 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      }
-
-      @keyframes slideDownMenu {
-        from { opacity: 0; transform: translateY(-12px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-
-      .navmenu ul li {
-        width: 100%;
-      }
+      .navmenu ul.show-mobile-menu { display: flex !important; }
 
       .navmenu ul li a {
         display: block;
         padding: 14px 20px;
-        font-size: 1rem;
         color: var(--text-dark);
-        border-bottom: 1px solid rgba(0, 0, 128, 0.05);
-        transition: all 0.2s ease;
-      }
-
-      .navmenu ul li:last-child a {
-        border-bottom: none;
-      }
-
-      .navmenu ul li a:hover, 
-      .navmenu ul li a.active {
-        background-color: var(--accent-color) !important;
-        color: #ffffff !important;
-        padding-left: 24px;
-        border-left: none;
       }
 
       .mobile-nav-toggle {
@@ -216,12 +140,6 @@
         border-radius: 8px;
         padding: 4px 10px;
         cursor: pointer;
-        transition: transform 0.25s ease;
-      }
-
-      .mobile-nav-toggle.bi-x {
-        color: #ffffff;
-        transform: rotate(90deg);
       }
     }
 
@@ -233,16 +151,8 @@
       font-weight: 700;
       font-size: 0.9rem;
       border: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 14px rgba(0, 0, 128, 0.25);
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-    }
-
-    .btn-custom-primary:hover {
-      background-color: var(--primary-hover);
-      transform: translateY(-2px);
     }
 
     .btn-custom-accent {
@@ -253,38 +163,22 @@
       font-weight: 700;
       font-size: 0.88rem;
       border: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 14px rgba(128, 0, 0, 0.3);
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      text-decoration: none;
     }
 
     .btn-custom-accent:hover {
       background-color: var(--accent-hover);
       color: #ffffff !important;
-      transform: translateY(-2px);
     }
 
     .page-title-hero {
-      position: relative;
       background: linear-gradient(135deg, rgba(0, 0, 128, 0.92), rgba(128, 0, 0, 0.85)), 
                   url('assets/img/home.webp') center/cover no-repeat;
-      padding: clamp(80px, 12vh, 120px) 0 clamp(60px, 10vh, 100px) 0;
+      padding: 80px 0 60px 0;
       color: #ffffff;
-    }
-
-    .page-title-hero h1 {
-      font-size: clamp(1.8rem, 6vw, 2.8rem);
-      font-weight: 800;
-      margin-bottom: 10px;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    }
-
-    .breadcrumbs-bar {
-      background: rgba(0, 0, 0, 0.2);
-      padding: 10px 0;
-      margin-top: 30px;
     }
 
     .modern-card {
@@ -298,11 +192,6 @@
     .modern-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 16px 35px rgba(0, 0, 128, 0.12);
-      border-color: rgba(0, 0, 128, 0.3);
-    }
-
-    .hover-primary:hover {
-      color: var(--primary-color) !important;
     }
 
     .footer {
@@ -311,44 +200,6 @@
       border-top: 4px solid var(--accent-color);
     }
 
-    .footer h4 {
-      color: #FFFFFF !important;
-      font-weight: 700;
-      margin-bottom: 16px;
-      position: relative;
-      padding-bottom: 8px;
-      font-size: 1.15rem;
-    }
-
-    .footer h4::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 35px;
-      height: 3px;
-      background: var(--accent-color);
-      border-radius: 2px;
-    }
-
-    .footer-links a {
-      color: #FFFFFF !important;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      opacity: 0.9;
-    }
-
-    .footer-links a:hover {
-      color: #FFB3B3 !important;
-      padding-left: 4px;
-      opacity: 1;
-    }
-
-    .footer p, .footer span, .footer div {
-      color: #FFFFFF !important;
-    }
-
-    /* Floating WhatsApp Button */
     .floating-whatsapp {
       position: fixed;
       bottom: 25px;
@@ -366,23 +217,8 @@
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      transition: all 0.3s ease-in-out;
-      animation: pulse-wa 2s infinite;
     }
 
-    .floating-whatsapp:hover {
-      background-color: #128C7E;
-      color: #fff;
-      transform: scale(1.08);
-    }
-
-    @keyframes pulse-wa {
-      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-    }
-
-    /* Scroll Top Button */
     .scroll-top {
       position: fixed;
       bottom: 90px;
@@ -407,11 +243,6 @@
       opacity: 1;
       visibility: visible;
     }
-
-    .scroll-top:hover {
-      background-color: var(--accent-color);
-      color: #fff;
-    }
   </style>
 </head>
 
@@ -433,14 +264,11 @@
   <!-- Header Navbar -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <!-- Brand Logo -->
       <a href="index.html" class="logo d-flex align-items-center text-decoration-none me-lg-4">
         <img src="assets/img/jasaoutboundmalang.webp" alt="Logo Jasa Outbound Malang" class="me-2" style="height: 40px; width: auto;" onerror="this.style.display='none'">
         <span class="brand-logo-text">Jasa<span>Outbound<span>Malang</span></span></span>
       </a>
 
-      <!-- Navigation Menu -->
       <nav id="navmenu" class="navmenu mx-auto">
         <ul id="navmenu-list">
           <li><a href="index.html">Home</a></li>
@@ -453,219 +281,307 @@
         <i id="mobile-menu-btn" class="mobile-nav-toggle bi bi-list"></i>
       </nav>
 
-      <!-- Action Button -->
       <div class="header-action-btns d-flex align-items-center gap-2">
-        <a class="btn-custom-primary text-decoration-none d-none d-sm-inline-flex" href="https://wa.me/6282211221909?text=Halo%20Admin%20Jasa%20Outbound%20Malang,%20saya%20ingin%20tanya%20tentang%20outbound" target="_blank">
+        <a class="btn-custom-primary text-decoration-none d-none d-sm-inline-flex" href="https://wa.me/6282211221909" target="_blank">
           <i class="bi bi-whatsapp me-1"></i> Hubungi Kami
         </a>
       </div>
-
     </div>
   </header>
 
   <main class="main">
 
     <!-- Page Title / Hero Section Blog -->
-    <div class="page-title-hero" data-aos="fade">
-      <div class="container text-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <span class="badge fw-bold mb-3 px-3 py-2" style="background-color: var(--accent-color); color: #ffffff; font-size: 0.8rem;"><i class="bi bi-journal-text me-1"></i> PUSAT EDUKASI & TIPS OUTBOUND MALANG</span>
-            <h1>Blog & Artikel Outbound & Rafting Malang</h1>
-            <p class="fs-5 text-white-50" style="font-size: clamp(0.95rem, 3vw, 1.2rem) !important;">Temukan ide rafting Malang, games pantai inklusif, panduan outbound sunrise, dan tips rapat strategi perusahaan.</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Breadcrumbs -->
-      <div class="breadcrumbs-bar">
-        <div class="container">
-          <ol class="d-flex gap-2 m-0 p-0 list-unstyled small text-white">
-            <li><a href="index.html" class="text-white text-decoration-none opacity-75">Home</a></li>
-            <li><span class="opacity-50 me-1">/</span></li>
-            <li class="current fw-semibold" style="color: #FF8080;">Blog & Artikel</li>
-          </ol>
-        </div>
+    <div class="page-title-hero text-center">
+      <div class="container">
+        <span class="badge fw-bold mb-3 px-3 py-2" style="background-color: var(--accent-color); color: #ffffff;"><i class="bi bi-journal-text me-1"></i> PUSAT EDUKASI & TIPS OUTBOUND MALANG</span>
+        <h1>Blog & Artikel Outbound Malang</h1>
+        <p class="fs-5 text-white-50">Kumpulan artikel dan wawasan terlengkap untuk merencanakan kegiatan outdoor yang aman, seru, dan berkesan bagi semua kelompok.</p>
       </div>
     </div>
 
     <!-- Blog Grid Section -->
-    <section id="blog-posts" class="section py-4 py-md-5">
-      <div class="container" data-aos="fade-up">
+    <section id="blog-posts" class="section py-5">
+      <div class="container">
 
-        <div class="row mb-3 mb-md-4 justify-content-center text-center">
+        <div class="row mb-4 justify-content-center text-center">
           <div class="col-lg-8">
-            <h2 class="fw-bold" style="color: var(--primary-color); font-size: clamp(1.5rem, 4vw, 2.1rem);">Artikel Pilihan & Terbaru</h2>
-            <p class="text-muted small">Wawasan eksklusif mengenai rafting Malang, gathering pantai, games tanpa basah-basahan, dan panduan waktu pelaksanaan terbaik.</p>
+            <h2 class="fw-bold" style="color: var(--primary-color);">Seluruh Artikel seputaran Outbound</h2>
+            <p class="text-muted small">Wawasan eksklusif mengenai rafting Malang, gathering pantai, games tanpa basah-basahan, dan panduan rapat outdoor.</p>
           </div>
         </div>
 
         <div class="row g-4 justify-content-center">
           
-          <!-- BARU 1: Waktu Terbaik Rafting Malang -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <!-- ARTIKEL 1: Waktu Terbaik Rafting Malang -->
+          <div class="col-lg-4 col-md-6">
             <article class="modern-card h-100 overflow-hidden d-flex flex-column justify-content-between">
               <div>
-                <div class="overflow-hidden">
-                  <a href="waktu-terbaik-rafting-malang-berdasarkan-musim.html">
-                    <img src="assets/img/waktu-terbaik-rafting-malang.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Waktu Terbaik Rafting Malang Berdasarkan Musim" loading="lazy">
-                  </a>
-                </div>
+                <a href="waktu-terbaik-rafting-malang-berdasarkan-musim.html">
+                  <img src="assets/img/waktu-terbaik-rafting-malang.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Waktu Terbaik Rafting Malang">
+                </a>
                 <div class="p-4">
-                  <div class="d-flex align-items-center gap-2 small text-muted mb-2" style="font-size: 0.78rem;">
-                    <span class="badge rounded-pill px-2 py-1 fw-bold" style="background-color: rgba(0, 0, 128, 0.08); color: var(--primary-color);">Rafting Malang</span>
-                    <span><i class="bi bi-calendar3 me-1"></i> 2026</span>
-                  </div>
+                  <span class="badge rounded-pill px-2 py-1 fw-bold mb-2" style="background-color: rgba(0, 0, 128, 0.08); color: var(--primary-color);">Rafting Malang</span>
                   <h5 class="fw-bold mb-2 fs-6">
-                    <a href="waktu-terbaik-rafting-malang-berdasarkan-musim.html" class="text-dark text-decoration-none hover-primary">Waktu Terbaik Rafting Malang Berdasarkan Musim dan Cuaca</a>
+                    <a href="waktu-terbaik-rafting-malang-berdasarkan-musim.html" class="text-dark text-decoration-none">Waktu Terbaik Rafting Malang Berdasarkan Musim dan Cuaca</a>
                   </h5>
-                  <p class="text-muted small mb-0">Cari tahu waktu terbaik pengarungan sungai di Malang berdasarkan musim dan cuaca agar liburan dan pengarungan tim lebih aman...</p>
+                  <p class="text-muted small mb-0">Cari tahu waktu terbaik pengarungan sungai di Malang berdasarkan musim dan cuaca agar liburan lebih aman...</p>
                 </div>
               </div>
               <div class="p-4 pt-0">
-                <a href="waktu-terbaik-rafting-malang-berdasarkan-musim.html" class="btn btn-custom-accent w-100 rounded-pill text-decoration-none d-flex align-items-center justify-content-center gap-2">
-                  <span>Baca Selengkapnya</span> <i class="bi bi-arrow-right"></i>
-                </a>
+                <a href="waktu-terbaik-rafting-malang-berdasarkan-musim.html" class="btn btn-custom-accent w-100 rounded-pill">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
               </div>
             </article>
           </div>
 
-          <!-- BARU 2: Games Pantai Tanpa Basah-Basahan -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+          <!-- ARTIKEL 2: Games Pantai Tanpa Basah-Basahan -->
+          <div class="col-lg-4 col-md-6">
             <article class="modern-card h-100 overflow-hidden d-flex flex-column justify-content-between">
               <div>
-                <div class="overflow-hidden">
-                  <a href="games-pantai-tanpa-basah-basahan.html">
-                    <img src="assets/img/games-pantai-tanpa-basah-basahan.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Games Pantai buat Karyawan yang Nggak Suka Basahan" loading="lazy">
-                  </a>
-                </div>
+                <a href="games-pantai-tanpa-basah-basahan.html">
+                  <img src="assets/img/games-pantai-tanpa-basah-basahan.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Games Pantai Kering">
+                </a>
                 <div class="p-4">
-                  <div class="d-flex align-items-center gap-2 small text-muted mb-2" style="font-size: 0.78rem;">
-                    <span class="badge rounded-pill px-2 py-1 fw-bold" style="background-color: rgba(128, 0, 0, 0.08); color: var(--accent-color);">Games Pantai</span>
-                    <span><i class="bi bi-calendar3 me-1"></i> 2026</span>
-                  </div>
+                  <span class="badge rounded-pill px-2 py-1 fw-bold mb-2" style="background-color: rgba(128, 0, 0, 0.08); color: var(--accent-color);">Games Pantai</span>
                   <h5 class="fw-bold mb-2 fs-6">
-                    <a href="games-pantai-tanpa-basah-basahan.html" class="text-dark text-decoration-none hover-primary">Games Pantai buat Karyawan yang Nggak Suka Basah-Basahan</a>
+                    <a href="games-pantai-tanpa-basah-basahan.html" class="text-dark text-decoration-none">Games Pantai buat Karyawan yang Nggak Suka Basah-Basahan</a>
                   </h5>
-                  <p class="text-muted small mb-0">Rekomendasi permainan kelompok seru di pasir kering yang tetap bisa diikuti karyawan yang kurang nyaman dengan aktivitas air...</p>
+                  <p class="text-muted small mb-0">Rekomendasi permainan kelompok seru di pasir kering yang tetap bisa diikuti karyawan yang tidak suka basah...</p>
                 </div>
               </div>
               <div class="p-4 pt-0">
-                <a href="games-pantai-tanpa-basah-basahan.html" class="btn btn-custom-accent w-100 rounded-pill text-decoration-none d-flex align-items-center justify-content-center gap-2">
-                  <span>Baca Selengkapnya</span> <i class="bi bi-arrow-right"></i>
-                </a>
+                <a href="games-pantai-tanpa-basah-basahan.html" class="btn btn-custom-accent w-100 rounded-pill">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
               </div>
             </article>
           </div>
 
-          <!-- BARU 3: Jam Berangkat Outbound Pantai Sunrise -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <!-- ARTIKEL 3: Jam Berangkat Outbound Pantai Sunrise -->
+          <div class="col-lg-4 col-md-6">
             <article class="modern-card h-100 overflow-hidden d-flex flex-column justify-content-between">
               <div>
-                <div class="overflow-hidden">
-                  <a href="jam-berangkat-outbound-pantai-sunrise.html">
-                    <img src="assets/img/jam-berangkat-outbound-pantai-sunrise.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Jam Berangkat Outbound Pantai Sunrise" loading="lazy">
-                  </a>
-                </div>
+                <a href="jam-berangkat-outbound-pantai-sunrise.html">
+                  <img src="assets/img/jam-berangkat-outbound-pantai-sunrise.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Jam Berangkat Outbound Sunrise">
+                </a>
                 <div class="p-4">
-                  <div class="d-flex align-items-center gap-2 small text-muted mb-2" style="font-size: 0.78rem;">
-                    <span class="badge rounded-pill px-2 py-1 fw-bold" style="background-color: rgba(0, 0, 128, 0.08); color: var(--primary-color);">Jadwal Outbound</span>
-                    <span><i class="bi bi-calendar3 me-1"></i> 2026</span>
-                  </div>
+                  <span class="badge rounded-pill px-2 py-1 fw-bold mb-2" style="background-color: rgba(0, 0, 128, 0.08); color: var(--primary-color);">Jadwal Outbound</span>
                   <h5 class="fw-bold mb-2 fs-6">
-                    <a href="jam-berangkat-outbound-pantai-sunrise.html" class="text-dark text-decoration-none hover-primary">Jam Berapa Harus Berangkat Biar Nggak Ketinggalan Sunrise di Outbound Pantai</a>
+                    <a href="jam-berangkat-outbound-pantai-sunrise.html" class="text-dark text-decoration-none">Jam Berapa Harus Berangkat Biar Nggak Ketinggalan Sunrise di Outbound Pantai</a>
                   </h5>
-                  <p class="text-muted small mb-0">Panduan lengkap menghitung jam kumpul, estimasi waktu tempuh, dan persiapan di lokasi agar tim tepat waktu menikmati matahari terbit...</p>
+                  <p class="text-muted small mb-0">Panduan lengkap menghitung jam kumpul, estimasi waktu tempuh, dan persiapan di lokasi agar tepat waktu...</p>
                 </div>
               </div>
               <div class="p-4 pt-0">
-                <a href="jam-berangkat-outbound-pantai-sunrise.html" class="btn btn-custom-accent w-100 rounded-pill text-decoration-none d-flex align-items-center justify-content-center gap-2">
-                  <span>Baca Selengkapnya</span> <i class="bi bi-arrow-right"></i>
-                </a>
+                <a href="jam-berangkat-outbound-pantai-sunrise.html" class="btn btn-custom-accent w-100 rounded-pill">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
               </div>
             </article>
           </div>
 
-          <!-- ARTIKEL RAPAT PANTAI 1: Rapat Strategi Pantai Direksi -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+          <!-- ARTIKEL 4: Rapat Strategi Pantai Direksi -->
+          <div class="col-lg-4 col-md-6">
             <article class="modern-card h-100 overflow-hidden d-flex flex-column justify-content-between">
               <div>
-                <div class="overflow-hidden">
-                  <a href="rapat-strategi-pantai-direksi.html">
-                    <img src="assets/img/Ilustrasi-rapat-strategi-direksi-di-tepi-pantai.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Rapat Strategi Pantai Direksi" loading="lazy">
-                  </a>
-                </div>
+                <a href="rapat-strategi-pantai-direksi.html">
+                  <img src="assets/img/Ilustrasi-rapat-strategi-direksi-di-tepi-pantai.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Rapat Strategi Pantai Direksi">
+                </a>
                 <div class="p-4">
-                  <div class="d-flex align-items-center gap-2 small text-muted mb-2" style="font-size: 0.78rem;">
-                    <span class="badge rounded-pill px-2 py-1 fw-bold" style="background-color: rgba(128, 0, 0, 0.08); color: var(--accent-color);">Rapat Strategi</span>
-                    <span><i class="bi bi-calendar3 me-1"></i> 2026</span>
-                  </div>
+                  <span class="badge rounded-pill px-2 py-1 fw-bold mb-2" style="background-color: rgba(128, 0, 0, 0.08); color: var(--accent-color);">Rapat Strategi</span>
                   <h5 class="fw-bold mb-2 fs-6">
-                    <a href="rapat-strategi-pantai-direksi.html" class="text-dark text-decoration-none hover-primary">Rapat Strategi Sambil Dengar Ombak: Kenapa Direksi Mulai Pilih Pantai daripada Ballroom Hotel</a>
+                    <a href="rapat-strategi-pantai-direksi.html" class="text-dark text-decoration-none">Rapat Strategi Sambil Dengar Ombak: Kenapa Direksi Mulai Pilih Pantai daripada Ballroom Hotel</a>
                   </h5>
-                  <p class="text-muted small mb-0">Simak alasan mengapa direksi mulai meninggalkan ballroom hotel dan beralih ke pantai untuk pertemuan strategis yang lebih jernih...</p>
+                  <p class="text-muted small mb-0">Simak alasan mengapa direksi mulai beralih ke pantai untuk pertemuan strategis yang lebih jernih...</p>
                 </div>
               </div>
               <div class="p-4 pt-0">
-                <a href="rapat-strategi-pantai-direksi.html" class="btn btn-custom-accent w-100 rounded-pill text-decoration-none d-flex align-items-center justify-content-center gap-2">
-                  <span>Baca Selengkapnya</span> <i class="bi bi-arrow-right"></i>
-                </a>
+                <a href="rapat-strategi-pantai-direksi.html" class="btn btn-custom-accent w-100 rounded-pill">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
               </div>
             </article>
           </div>
 
-          <!-- ARTIKEL RAPAT PANTAI 2: Meeting Outdoor Pantai Tips Fokus -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <!-- ARTIKEL 5: Meeting Outdoor Pantai Tips Fokus -->
+          <div class="col-lg-4 col-md-6">
             <article class="modern-card h-100 overflow-hidden d-flex flex-column justify-content-between">
               <div>
-                <div class="overflow-hidden">
-                  <a href="meeting-outdoor-pantai-tips-fokus.html">
-                    <img src="assets/img/Ilustrasi-area-meeting-outdoor-pantai-tertata-rapi.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Meeting Outdoor Pantai Tips Fokus" loading="lazy">
-                  </a>
-                </div>
+                <a href="meeting-outdoor-pantai-tips-fokus.html">
+                  <img src="assets/img/Ilustrasi-area-meeting-outdoor-pantai-tertata-rapi.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Meeting Outdoor Pantai Tips Fokus">
+                </a>
                 <div class="p-4">
-                  <div class="d-flex align-items-center gap-2 small text-muted mb-2" style="font-size: 0.78rem;">
-                    <span class="badge rounded-pill px-2 py-1 fw-bold" style="background-color: rgba(0, 0, 128, 0.08); color: var(--primary-color);">Tips Meeting</span>
-                    <span><i class="bi bi-calendar3 me-1"></i> 2026</span>
-                  </div>
+                  <span class="badge rounded-pill px-2 py-1 fw-bold mb-2" style="background-color: rgba(0, 0, 128, 0.08); color: var(--primary-color);">Tips Meeting</span>
                   <h5 class="fw-bold mb-2 fs-6">
-                    <a href="meeting-outdoor-pantai-tips-fokus.html" class="text-dark text-decoration-none hover-primary">Meeting Outdoor Pantai: Tips Menjaga Fokus Rapat di Tengah Suasana Santai</a>
+                    <a href="meeting-outdoor-pantai-tips-fokus.html" class="text-dark text-decoration-none">Meeting Outdoor Pantai: Tips Menjaga Fokus Rapat di Tengah Suasana Santai</a>
                   </h5>
-                  <p class="text-muted small mb-0">Panduan lengkap mengatur tempat duduk, rundown acara, serta mengantisipasi gangguan suara angin agar rapat pantai tetap fokus...</p>
+                  <p class="text-muted small mb-0">Panduan lengkap mengatur tempat duduk, rundown acara, serta mengantisipasi gangguan suara angin...</p>
                 </div>
               </div>
               <div class="p-4 pt-0">
-                <a href="meeting-outdoor-pantai-tips-fokus.html" class="btn btn-custom-accent w-100 rounded-pill text-decoration-none d-flex align-items-center justify-content-center gap-2">
-                  <span>Baca Selengkapnya</span> <i class="bi bi-arrow-right"></i>
-                </a>
+                <a href="meeting-outdoor-pantai-tips-fokus.html" class="btn btn-custom-accent w-100 rounded-pill">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
               </div>
             </article>
           </div>
 
-          <!-- ARTIKEL RAPAT PANTAI 3: Keputusan Strategis di Luar Ruang Rapat Kantor -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+          <!-- ARTIKEL 6: Keputusan Strategis di Luar Ruang Rapat Kantor -->
+          <div class="col-lg-4 col-md-6">
             <article class="modern-card h-100 overflow-hidden d-flex flex-column justify-content-between">
               <div>
-                <div class="overflow-hidden">
-                  <a href="keputusan-strategis-di-luar-ruang-rapat-kantor.html">
-                    <img src="assets/img/Ilustrasi-diskusi-strategis-santai-di-luar-ruangan.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Keputusan Strategis di Luar Ruang Rapat Kantor" loading="lazy">
-                  </a>
-                </div>
+                <a href="keputusan-strategis-di-luar-ruang-rapat-kantor.html">
+                  <img src="assets/img/Ilustrasi-diskusi-strategis-santai-di-luar-ruangan.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Keputusan Strategis di Luar Ruang Rapat">
+                </a>
                 <div class="p-4">
-                  <div class="d-flex align-items-center gap-2 small text-muted mb-2" style="font-size: 0.78rem;">
-                    <span class="badge rounded-pill px-2 py-1 fw-bold" style="background-color: rgba(0, 0, 128, 0.08); color: var(--primary-color);">Kepemimpinan</span>
-                    <span><i class="bi bi-calendar3 me-1"></i> 2026</span>
-                  </div>
+                  <span class="badge rounded-pill px-2 py-1 fw-bold mb-2" style="background-color: rgba(0, 0, 128, 0.08); color: var(--primary-color);">Kepemimpinan</span>
                   <h5 class="fw-bold mb-2 fs-6">
-                    <a href="keputusan-strategis-di-luar-ruang-rapat-kantor.html" class="text-dark text-decoration-none hover-primary">Kenapa Keputusan Strategis Lebih Gampang Diambil di Luar Ruang Rapat Kantor</a>
+                    <a href="keputusan-strategis-di-luar-ruang-rapat-kantor.html" class="text-dark text-decoration-none">Kenapa Keputusan Strategis Lebih Gampang Diambil di Luar Ruang Rapat Kantor</a>
                   </h5>
-                  <p class="text-muted small mb-0">Pelajari bagaimana perubahan lingkungan outdoor menurunkan ketegangan psikologis dan membuka ruang berpikir bagi tim manajemen...</p>
+                  <p class="text-muted small mb-0">Pelajari bagaimana perubahan lingkungan outdoor menurunkan ketegangan psikologis bagi tim manajemen...</p>
                 </div>
               </div>
               <div class="p-4 pt-0">
-                <a href="keputusan-strategis-di-luar-ruang-rapat-kantor.html" class="btn btn-custom-accent w-100 rounded-pill text-decoration-none d-flex align-items-center justify-content-center gap-2">
-                  <span>Baca Selengkapnya</span> <i class="bi bi-arrow-right"></i>
+                <a href="keputusan-strategis-di-luar-ruang-rapat-kantor.html" class="btn btn-custom-accent w-100 rounded-pill">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ARTIKEL 7: Perlengkapan Rapat Strategi Pinggir Pantai -->
+          <div class="col-lg-4 col-md-6">
+            <article class="modern-card h-100 overflow-hidden d-flex flex-column justify-content-between">
+              <div>
+                <a href="perlengkapan-rapat-strategi-pinggir-pantai.html">
+                  <img src="assets/img/Ilustrasi-tenda-dan-perlengkapan-rapat-strategi-pinggir-pantai.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Perlengkapan Rapat Strategi Pantai">
                 </a>
+                <div class="p-4">
+                  <span class="badge rounded-pill px-2 py-1 fw-bold mb-2" style="background-color: rgba(0, 0, 128, 0.08); color: var(--primary-color);">Logistik Rapat</span>
+                  <h5 class="fw-bold mb-2 fs-6">
+                    <a href="perlengkapan-rapat-strategi-pinggir-pantai.html" class="text-dark text-decoration-none">Perlengkapan Wajib Dibawa Kalau Rapat Strategi Pindah ke Pinggir Pantai</a>
+                  </h5>
+                  <p class="text-muted small mb-0">Daftar perlengkapan dasar pelindung cuaca, teknis genset/power, dan kebutuhan pribadi peserta...</p>
+                </div>
+              </div>
+              <div class="p-4 pt-0">
+                <a href="perlengkapan-rapat-strategi-pinggir-pantai.html" class="btn btn-custom-accent w-100 rounded-pill">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ARTIKEL 8: Games Pantai Anti Mainstream -->
+          <div class="col-lg-4 col-md-6">
+            <article class="modern-card h-100 overflow-hidden d-flex flex-column justify-content-between">
+              <div>
+                <a href="games-pantai-anti-mainstream.html">
+                  <img src="assets/img/games-pantai-anti-mainstream.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Games Pantai Anti Mainstream">
+                </a>
+                <div class="p-4">
+                  <span class="badge rounded-pill px-2 py-1 fw-bold mb-2" style="background-color: rgba(128, 0, 0, 0.08); color: var(--accent-color);">Games Outbound</span>
+                  <h5 class="fw-bold mb-2 fs-6">
+                    <a href="games-pantai-anti-mainstream.html" class="text-dark text-decoration-none">Games Pantai Anti Mainstream: Ide Seru di Luar Voli Pantai yang Bikin Semua Divisi Ikutan</a>
+                  </h5>
+                  <p class="text-muted small mb-0">Cari ide games pantai selain voli? Pelajari kumpulan aktivitas seru yang melibatkan seluruh karyawan...</p>
+                </div>
+              </div>
+              <div class="p-4 pt-0">
+                <a href="games-pantai-anti-mainstream.html" class="btn btn-custom-accent w-100 rounded-pill">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ARTIKEL 9: Tug of War di Pasir -->
+          <div class="col-lg-4 col-md-6">
+            <article class="modern-card h-100 overflow-hidden d-flex flex-column justify-content-between">
+              <div>
+                <a href="tug-of-war-pasir-outbound-pantai.html">
+                  <img src="assets/img/tug-of-war-pasir-outbound-pantai1.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Tarik Tambang di Pasir Pantai">
+                </a>
+                <div class="p-4">
+                  <span class="badge rounded-pill px-2 py-1 fw-bold mb-2" style="background-color: rgba(0, 0, 128, 0.08); color: var(--primary-color);">Team Building</span>
+                  <h5 class="fw-bold mb-2 fs-6">
+                    <a href="tug-of-war-pasir-outbound-pantai.html" class="text-dark text-decoration-none">Tug of War di Pasir: Games Klasik yang Ternyata Masih Jadi Favorit Outbound Pantai</a>
+                  </h5>
+                  <p class="text-muted small mb-0">Simak alasan mengapa tarik tambang di pasir tetap jadi favorit, cara menjaga keamanan, dan tips kekompakan...</p>
+                </div>
+              </div>
+              <div class="p-4 pt-0">
+                <a href="tug-of-war-pasir-outbound-pantai.html" class="btn btn-custom-accent w-100 rounded-pill">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ARTIKEL 10: Games Pantai Selain Voli Semua Umur -->
+          <div class="col-lg-4 col-md-6">
+            <article class="modern-card h-100 overflow-hidden d-flex flex-column justify-content-between">
+              <div>
+                <a href="games-pantai-selain-voli-semua-umur.html">
+                  <img src="assets/img/games-pantai-selain-voli-semua-umur.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Games Pantai Ramah Umur">
+                </a>
+                <div class="p-4">
+                  <span class="badge rounded-pill px-2 py-1 fw-bold mb-2" style="background-color: rgba(0, 0, 128, 0.08); color: var(--primary-color);">Games Outbound</span>
+                  <h5 class="fw-bold mb-2 fs-6">
+                    <a href="games-pantai-selain-voli-semua-umur.html" class="text-dark text-decoration-none">5 Games Pantai Selain Voli yang Bisa Dimainkan Semua Umur Karyawan</a>
+                  </h5>
+                  <p class="text-muted small mb-0">Rekomendasi 5 pilihan games pantai yang ramah usia, ringan secara fisik, namun tetap seru...</p>
+                </div>
+              </div>
+              <div class="p-4 pt-0">
+                <a href="games-pantai-selain-voli-semua-umur.html" class="btn btn-custom-accent w-100 rounded-pill">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ARTIKEL 11: Outbound Sunrise di Pantai -->
+          <div class="col-lg-4 col-md-6">
+            <article class="modern-card h-100 overflow-hidden d-flex flex-column justify-content-between">
+              <div>
+                <a href="outbound-pantai-sunrise.html">
+                  <img src="assets/img/Tim-kantor-mengikuti-outbound-sunrise-di-tepi-pantai.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Outbound Sunrise di Pantai">
+                </a>
+                <div class="p-4">
+                  <span class="badge rounded-pill px-2 py-1 fw-bold mb-2" style="background-color: rgba(128, 0, 0, 0.08); color: var(--accent-color);">Konsep Outbound</span>
+                  <h5 class="fw-bold mb-2 fs-6">
+                    <a href="outbound-pantai-sunrise.html" class="text-dark text-decoration-none">Outbound Sunrise di Pantai: Konsep Beda yang Bikin Tim Kantor Nggak Ngantuk Duluan</a>
+                  </h5>
+                  <p class="text-muted small mb-0">Pelajari alasan mengapa kegiatan pagi di pantai sangat efektif untuk menyegarkan pikiran tim...</p>
+                </div>
+              </div>
+              <div class="p-4 pt-0">
+                <a href="outbound-pantai-sunrise.html" class="btn btn-custom-accent w-100 rounded-pill">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ARTIKEL 12: Gathering Pantai Pagi Jadwal Ideal -->
+          <div class="col-lg-4 col-md-6">
+            <article class="modern-card h-100 overflow-hidden d-flex flex-column justify-content-between">
+              <div>
+                <a href="gathering-pantai-pagi-jadwal-ideal.html">
+                  <img src="assets/img/foto-bersama-gathering-pantai-pagi-tim.webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Jadwal Gathering Pagi Pantai">
+                </a>
+                <div class="p-4">
+                  <span class="badge rounded-pill px-2 py-1 fw-bold mb-2" style="background-color: rgba(0, 0, 128, 0.08); color: var(--primary-color);">Panduan Jadwal</span>
+                  <h5 class="fw-bold mb-2 fs-6">
+                    <a href="gathering-pantai-pagi-jadwal-ideal.html" class="text-dark text-decoration-none">Gathering Pantai Pagi: Jadwal Ideal biar Karyawan Nggak Kesiangan dan Tetap Segar</a>
+                  </h5>
+                  <p class="text-muted small mb-0">Panduan menghitung waktu mundur dan estimasi perjalanan agar acara pagi berjalan tepat waktu...</p>
+                </div>
+              </div>
+              <div class="p-4 pt-0">
+                <a href="gathering-pantai-pagi-jadwal-ideal.html" class="btn btn-custom-accent w-100 rounded-pill">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- ARTIKEL 13: Cerita Tim Kantor Outbound Sunrise Pertama Kali -->
+          <div class="col-lg-4 col-md-6">
+            <article class="modern-card h-100 overflow-hidden d-flex flex-column justify-content-between">
+              <div>
+                <a href="cerita-tim-kantor-outbound-sunrise-pertama-kali.html">
+                  <img src="assets/img/Ekspresi-tim-kantor-saat-pertama-kali-mengikuti-outbound-sunrise-di-pantai (1).webp" class="img-fluid w-100 object-fit-cover" style="height: 200px;" alt="Cerita Tim Outbound Sunrise">
+                </a>
+                <div class="p-4">
+                  <span class="badge rounded-pill px-2 py-1 fw-bold mb-2" style="background-color: rgba(128, 0, 0, 0.08); color: var(--accent-color);">Pengalaman Tim</span>
+                  <h5 class="fw-bold mb-2 fs-6">
+                    <a href="cerita-tim-kantor-outbound-sunrise-pertama-kali.html" class="text-dark text-decoration-none">Bangun Sebelum Matahari: Cerita Tim Kantor yang Coba Outbound Sunrise Pertama Kali</a>
+                  </h5>
+                  <p class="text-muted small mb-0">Simak pengalaman seru karyawan yang awalnya ragu bangun pagi, namun terpesona dengan keindahan sunrise...</p>
+                </div>
+              </div>
+              <div class="p-4 pt-0">
+                <a href="cerita-tim-kantor-outbound-sunrise-pertama-kali.html" class="btn btn-custom-accent w-100 rounded-pill">Baca Selengkapnya <i class="bi bi-arrow-right"></i></a>
               </div>
             </article>
           </div>
@@ -678,7 +594,7 @@
   </main>
 
   <!-- Footer Section -->
-  <footer id="footer" class="footer py-4 py-md-5">
+  <footer id="footer" class="footer py-5">
     <div class="container">
       <div class="row gy-4 justify-content-between">
         <div class="col-lg-4 col-md-6">
@@ -686,38 +602,21 @@
             <img src="assets/img/jasaoutboundmalang.webp" alt="Logo Jasa Outbound Malang Footer" style="height: 38px;" class="me-2" onerror="this.style.display='none'">
             <span class="brand-logo-text text-white">Jasa Outbound<span style="color: var(--accent-color);"> Malang</span></span>
           </a>
-          <p class="small mb-3 text-white" style="line-height: 1.6;">Vendor spesialis rafting Malang, outbound sunrise, gathering pantai, dan team building terpercaya di Kota Batu & Malang.</p>
-          <div class="small text-white">
-            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2" style="color: #FF8080;"></i> Jl. Raya Ir. Soekarno, Kota Batu, Jawa Timur 65326</p>
-            <p class="mb-2"><i class="bi bi-whatsapp me-2" style="color: #FF8080;"></i> WhatsApp: <a href="https://wa.me/6282211221909" target="_blank" class="text-white text-decoration-none fw-semibold">+62 822-1122-1909</a></p>
-          </div>
+          <p class="small mb-3 text-white">Vendor spesialis rafting Malang, outbound sunrise, gathering pantai, dan team building terpercaya.</p>
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4 class="text-white">Tautan Cepat</h4>
-          <ul class="list-unstyled d-flex flex-column gap-2 small">
-            <li><a href="index.html" class="text-white"><i class="bi bi-chevron-right me-1" style="color: var(--accent-color);"></i> Beranda</a></li>
-            <li><a href="about.html" class="text-white"><i class="bi bi-chevron-right me-1" style="color: var(--accent-color);"></i> Tentang Kami</a></li>
-            <li><a href="paket.html" class="text-white"><i class="bi bi-chevron-right me-1" style="color: var(--accent-color);"></i> Paket Outbound</a></li>
-            <li><a href="gallery.html" class="text-white"><i class="bi bi-chevron-right me-1" style="color: var(--accent-color);"></i> Galeri Kegiatan</a></li>
-            <li><a href="blog.html" class="text-white"><i class="bi bi-chevron-right me-1" style="color: var(--accent-color);"></i> Artikel & Blog</a></li>
-            <li><a href="contact.html" class="text-white"><i class="bi bi-chevron-right me-1" style="color: var(--accent-color);"></i> Kontak</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-3 footer-links">
+        <div class="col-lg-3 col-md-3">
           <h4 class="text-white">Trending Topik</h4>
           <ul class="list-unstyled d-flex flex-column gap-2 small">
-            <li><a href="waktu-terbaik-rafting-malang-berdasarkan-musim.html" class="text-white"><i class="bi bi-chevron-right me-1" style="color: var(--accent-color);"></i> Waktu Terbaik Rafting Malang</a></li>
-            <li><a href="games-pantai-tanpa-basah-basahan.html" class="text-white"><i class="bi bi-chevron-right me-1" style="color: var(--accent-color);"></i> Games Pantai Tanpa Basah</a></li>
-            <li><a href="jam-berangkat-outbound-pantai-sunrise.html" class="text-white"><i class="bi bi-chevron-right me-1" style="color: var(--accent-color);"></i> Jam Berangkat Outbound Sunrise</a></li>
-            <li><a href="rapat-strategi-pantai-direksi.html" class="text-white"><i class="bi bi-chevron-right me-1" style="color: var(--accent-color);"></i> Rapat Strategi Pantai Direksi</a></li>
+            <li><a href="waktu-terbaik-rafting-malang-berdasarkan-musim.html" class="text-white text-decoration-none">Waktu Terbaik Rafting Malang</a></li>
+            <li><a href="games-pantai-tanpa-basah-basahan.html" class="text-white text-decoration-none">Games Pantai Tanpa Basah</a></li>
+            <li><a href="jam-berangkat-outbound-pantai-sunrise.html" class="text-white text-decoration-none">Jam Berangkat Outbound Sunrise</a></li>
           </ul>
         </div>
       </div>
 
       <div class="text-center mt-4 pt-3 border-top border-secondary border-opacity-25 text-white small">
-        <p class="m-0 text-white">© 2026 <strong class="text-white">Jasa Outbound Malang & Batu</strong>. All Rights Reserved.</p>
+        <p class="m-0 text-white">© 2026 <strong>Jasa Outbound Malang & Batu</strong>. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
@@ -726,19 +625,13 @@
   <a href="#" id="scroll-top" class="scroll-top" aria-label="Scroll Top"><i class="bi bi-arrow-up-short fs-4"></i></a>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/6282211221909?text=Halo%20Admin%20Jasa%20Outbound%20Malang,%20saya%20ingin%20konsultasi%20outbound" target="_blank" class="floating-whatsapp" aria-label="Chat WhatsApp Jasa Outbound Malang">
+  <a href="https://wa.me/6282211221909" target="_blank" class="floating-whatsapp" aria-label="Chat WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
 
   <!-- Script Navigasi Mobile & Scroll Top -->
   <script>
@@ -752,18 +645,6 @@
           navList.classList.toggle('show-mobile-menu');
           this.classList.toggle('bi-list');
           this.classList.toggle('bi-x');
-        });
-
-        const navLinks = navList.querySelectorAll('a');
-        navLinks.forEach(link => {
-          link.addEventListener('click', function() {
-            navLinks.forEach(l => l.classList.remove('active'));
-            this.classList.add('active');
-
-            navList.classList.remove('show-mobile-menu');
-            mobileBtn.classList.add('bi-list');
-            mobileBtn.classList.remove('bi-x');
-          });
         });
       }
 
