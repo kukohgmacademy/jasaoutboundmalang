@@ -50,7 +50,33 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Cluster Artikel Outbound Pantai Nginap Bonfire (Terbaru) -->
+  <!-- Cluster Artikel Gathering Bertema Kostum Nusantara (Terbaru) -->
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/gathering-bertema-kostum-nusantara.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/dress-code-unik-kantor-gathering.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/ide-tema-kostum-gathering-batik-daerah.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/aturan-kostum-gathering-nyaman-seharian.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Cluster Artikel Outbound Pantai Nginap Bonfire -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/outbound-pantai-nginap-bonfire.html</loc>
     <lastmod>2026-08-06</lastmod>
