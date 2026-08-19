@@ -3,13 +3,13 @@
   <!-- Root Domain & Halaman Utama Website -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jasaoutboundmalang.web.id/index.html</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://jasaoutboundmalang.web.id/blog.html</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -50,7 +50,59 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Cluster Artikel Gathering Bertema Kostum Nusantara (Terbaru) -->
+  <!-- Cluster Artikel Outbound Team Building & Capacity Building Perusahaan (TERBARU) -->
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/panduan-lengkap-outbound-team-building-malang.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/rekomendasi-lokasi-outbound-batu-malang-terfavorit.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/manfaat-capacity-building-karyawan-di-alam-terbuka.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/tips-menyusun-rundown-gathering-kantor-2-hari-1-malam.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Cluster Artikel Outbound Petualangan Alam & Wisata Edukasi (TERBARU) -->
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/panduan-outbound-petualangan-alam-dan-rafting-malang.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/tips-persiapan-fisik-dan-perlengkapan-rafting-kasembon.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/rekomendasi-games-outbound-pantai-malang-selatan.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/manfaat-outbound-edukasi-sekolah-anak-di-malang.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Cluster Artikel Gathering Bertema Kostum Nusantara -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/gathering-bertema-kostum-nusantara.html</loc>
     <lastmod>2026-08-06</lastmod>
@@ -220,7 +272,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Artikel Outbound baru -->
+  <!-- Artikel Outbound Baru -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/outbound-pantai-sunrise.html</loc>
     <lastmod>2026-08-04</lastmod>
