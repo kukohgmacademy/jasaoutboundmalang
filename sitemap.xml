@@ -3,13 +3,13 @@
   <!-- Root Domain & Halaman Utama Website -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jasaoutboundmalang.web.id/index</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://jasaoutboundmalang.web.id/blog</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -50,7 +50,27 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- 3 ARTIKEL TERBARU DITERBITKAN (2 SEPTEMBER 2026) -->
+  <!-- 3 ARTIKEL TERBARU DITERBITKAN (3 SEPTEMBER 2026) -->
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/panduan-memilih-lokasi-outbound-batu-malang-perusahaan</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/manfaat-team-building-outbound-efisiensi-kerja-karyawan</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/estimasi-biaya-paket-outbound-malang-batu-perusahaan</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ARTIKEL DITERBITKAN SEBELUMNYA (2 SEPTEMBER 2026) -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/sensasi-outbound-rafting-arung-jeram-malang</loc>
     <lastmod>2026-09-02</lastmod>
