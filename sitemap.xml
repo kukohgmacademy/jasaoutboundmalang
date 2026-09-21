@@ -3,13 +3,13 @@
   <!-- Root Domain & Halaman Utama Website -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jasaoutboundmalang.web.id/index</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://jasaoutboundmalang.web.id/blog</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -50,7 +50,27 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- 3 ARTIKEL TERBARU DITERBITKAN (19 SEPTEMBER 2026) -->
+  <!-- 3 ARTIKEL TERBARU DITERBITKAN (21 SEPTEMBER 2026) -->
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/paket-combo-rafting-dan-outbound-kasembon-malang</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/panduan-lengkap-ldks-dan-outbound-sekolah-malang-raya</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/rekomendasi-lokasi-outbound-kabupaten-malang-perusahaan</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ARTIKEL DITERBITKAN SEBELUMNYA (19 SEPTEMBER 2026) -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/jasa-outbound-sumbermaron-pagelaran-kabupaten-malang</loc>
     <lastmod>2026-09-19</lastmod>
