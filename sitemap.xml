@@ -3,7 +3,7 @@
   <!-- Root Domain & Halaman Utama Website -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://jasaoutboundmalang.web.id/blog</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -50,7 +50,15 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ARTIKEL TERBARU DITERBITKAN (24 SEPTEMBER 2026) -->
+  <!-- ARTIKEL TERBARU DITERBITKAN (25 SEPTEMBER 2026) -->
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/jasa-outbound-malang-siap-melayani-berbagai-daerah</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ARTIKEL DITERBITKAN SEBELUMNYA (24 SEPTEMBER 2026) -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/paket-outbound-pantai-sumbermanjing-wetan-malang</loc>
     <lastmod>2026-09-24</lastmod>
