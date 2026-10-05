@@ -3,7 +3,7 @@
   <!-- Root Domain & Halaman Utama Website -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://jasaoutboundmalang.web.id/blog</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -50,7 +50,15 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ARTIKEL TERBARU DITERBITKAN (3 OKTOBER 2026) -->
+  <!-- ARTIKEL TERBARU DITERBITKAN (5 OKTOBER 2026) -->
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/outbound-onboarding-karyawan-baru-malang-program-adaptasi-tim</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ARTIKEL DITERBITKAN SEBELUMNYA (3 OKTOBER 2026) -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/jasa-outbound-malang-batu-pujon-luar-kota</loc>
     <lastmod>2026-10-03</lastmod>
