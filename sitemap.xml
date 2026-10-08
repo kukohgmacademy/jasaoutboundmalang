@@ -3,7 +3,7 @@
   <!-- Root Domain & Halaman Utama Website -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://jasaoutboundmalang.web.id/blog</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -50,7 +50,15 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ARTIKEL TERBARU DITERBITKAN (7 OKTOBER 2026) -->
+  <!-- ARTIKEL TERBARU DITERBITKAN (8 OKTOBER 2026) -->
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/outbound-anak-sekolah-malang-panduan-guru-dan-orang-tua</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ARTIKEL DITERBITKAN SEBELUMNYA (7 OKTOBER 2026) -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/jasa-outbound-malang-panduan-lengkap-memilih-vendor-outbound</loc>
     <lastmod>2026-10-07</lastmod>
