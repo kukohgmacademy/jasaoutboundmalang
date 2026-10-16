@@ -3,7 +3,7 @@
   <!-- Root Domain & Halaman Utama Website -->
   <url>
     <loc>https://jasaoutboundmalang.web.id/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://jasaoutboundmalang.web.id/blog</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -48,6 +48,14 @@
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- ARTIKEL TERBARU DITERBITKAN (16 OKTOBER 2026) -->
+  <url>
+    <loc>https://jasaoutboundmalang.web.id/anggaran-outbound-malang-cara-menyusun-biaya-kegiatan</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <!-- ARTIKEL TERBARU DITERBITKAN (15 OKTOBER 2026) -->
