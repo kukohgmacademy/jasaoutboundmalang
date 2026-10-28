@@ -63,8 +63,8 @@
           "@type": "AggregateOffer",
           "priceCurrency": "IDR",
           "lowPrice": "75000",
-          "highPrice": "210000",
-          "offerCount": "8",
+          "highPrice": "750000",
+          "offerCount": "13",
           "priceValidUntil": "2026-12-31",
           "availability": "https://schema.org/InStock",
           "seller": {
@@ -302,48 +302,215 @@
       border-radius: 18px;
       border: 1px solid #eef0f2;
       overflow: hidden;
+      height: 100%;
+    }
+
+    /* PENGATURAN GAMBAR UTAMA AGAR UTUH (TIDAK KEPOTONG & RESPONSIVE MOBILE) */
+    .package-header-img-wrapper {
+      width: 100%;
+      background-color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      max-height: 480px;
     }
 
     .package-header-img {
-      height: clamp(220px, 35vh, 320px);
-      object-fit: cover;
+      width: 100%;
+      height: auto;
+      max-height: 480px;
+      object-fit: contain !important;
+      display: block;
     }
 
-    .itinerary-timeline {
-      border-left: 3px solid var(--primary-color);
-      padding-left: 18px;
-      margin-left: 6px;
-    }
-
-    .itinerary-item {
-      position: relative;
-      margin-bottom: 22px;
-    }
-
-    .itinerary-item::before {
-      content: '';
-      position: absolute;
-      left: -24px;
-      top: 4px;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--primary-color);
-    }
-
-    @media (min-width: 992px) {
-      .sticky-sidebar {
-        position: sticky;
-        top: 90px;
-        z-index: 10;
+    @media (max-width: 767px) {
+      .package-header-img-wrapper {
+        max-height: 300px;
       }
+      .package-header-img {
+        max-height: 300px;
+      }
+    }
+
+    .sidebar-booking-card {
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid #eef0f2;
+      padding: clamp(20px, 2.5vw, 28px);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .facility-box {
       background: #ffffff;
       border-radius: 18px;
-      padding: clamp(18px, 3vw, 24px);
+      padding: clamp(20px, 3vw, 28px);
       border: 1px solid #eef0f2;
+    }
+
+    .facility-item-card {
+      background: #F8FAFC;
+      border-radius: 12px;
+      padding: 14px 16px;
+      border: 1px solid #E2E8F0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.25s ease;
+    }
+
+    .facility-item-card:hover {
+      background: #ffffff;
+      border-color: var(--primary-color);
+      box-shadow: 0 4px 14px rgba(0, 0, 128, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .facility-icon-wrapper {
+      font-size: 1.1rem;
+      color: var(--primary-color);
+      background: rgba(0, 0, 128, 0.08);
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* GALERI FOTO DETAIL PAKET STYLING */
+    .package-gallery-card {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #f1f5f9;
+      height: 200px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .package-gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .package-gallery-card:hover .package-gallery-img {
+      transform: scale(1.08);
+    }
+
+    .package-gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 128, 0.82) 0%, rgba(0, 0, 0, 0.1) 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 12px;
+    }
+
+    .package-gallery-card:hover .package-gallery-overlay {
+      opacity: 1;
+    }
+
+    @media (max-width: 576px) {
+      .package-gallery-card {
+        height: 160px;
+      }
+    }
+
+    /* Timeline Vertical Style */
+    .rundown-timeline-wrapper {
+      position: relative;
+      padding: 10px 0;
+    }
+
+    .rundown-timeline-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      bottom: 24px;
+      left: 172px;
+      width: 3px;
+      background-color: var(--primary-color);
+      z-index: 1;
+    }
+
+    .rundown-timeline-item {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      padding: 16px 0;
+      z-index: 2;
+    }
+
+    .rundown-time-badge {
+      background: rgba(0, 0, 128, 0.08);
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 6px 12px;
+      border-radius: 20px;
+      width: 150px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .timeline-dot {
+      width: 15px;
+      height: 15px;
+      background-color: var(--primary-color);
+      border: 3px solid #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--primary-color);
+      margin: 8px 18px 0 18px;
+      flex-shrink: 0;
+      z-index: 3;
+    }
+
+    .rundown-content-body {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 14px 18px;
+      flex-grow: 1;
+      transition: all 0.25s ease;
+    }
+
+    .rundown-timeline-item:hover .rundown-content-body {
+      background: #ffffff;
+      border-color: var(--primary-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 128, 0.06);
+    }
+
+    @media (max-width: 767px) {
+      .rundown-timeline-wrapper::before {
+        left: 12px;
+      }
+      .rundown-timeline-item {
+        flex-direction: column;
+        padding-left: 32px;
+      }
+      .timeline-dot {
+        position: absolute;
+        left: 6px;
+        top: 20px;
+        margin: 0;
+      }
+      .rundown-time-badge {
+        width: auto;
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+      .rundown-content-body {
+        width: 100%;
+      }
     }
 
     .btn-custom-primary {
@@ -626,14 +793,15 @@
     <section id="package-detail" class="section py-4 py-md-5">
       <div class="container" data-aos="fade-up">
 
-        <div class="row g-3 g-md-4 align-items-start">
+        <!-- ROW TOP: Gambar Hero + Side Pricing (GAMBAR TIDAK KEPOTONG & RESPONSIVE) -->
+        <div class="row g-3 g-md-4 align-items-stretch mb-4">
 
-          <!-- Left Main Content Column -->
-          <div class="col-lg-8 d-flex flex-column gap-3 gap-md-4">
-
-            <!-- Hero Banner Image & Summary -->
+          <!-- Left Main Banner Column -->
+          <div class="col-lg-8">
             <div class="package-header-card shadow-sm">
-              <img id="pkg-img" src="assets/img/jasaoutboundmalang.webp" class="img-fluid w-100 package-header-img" alt="Paket Outbound Malang Batu">
+              <div class="package-header-img-wrapper">
+                <img id="pkg-img" src="assets/img/jasaoutboundmalang.webp" class="package-header-img" alt="Paket Outbound Malang Batu">
+              </div>
               <div class="p-3 p-sm-4">
                 <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
                   <span class="badge rounded-pill px-3 py-2 text-white" style="background-color: var(--primary-color); font-size: 0.75rem;" id="pkg-category">Kategori</span>
@@ -645,40 +813,12 @@
                 </div>
               </div>
             </div>
-
-            <!-- Fasilitas Paket Included -->
-            <div class="facility-box shadow-sm">
-              <h2 class="fw-bold mb-3" style="color: var(--primary-color); font-size: clamp(1.1rem, 3vw, 1.35rem);"><i class="bi bi-check-circle-fill me-2"></i>Fasilitas Sudah Termasuk (Included):</h2>
-              <div class="row g-2 g-md-3">
-                <div class="col-md-6">
-                  <ul class="list-unstyled d-flex flex-column gap-2 text-secondary small mb-0" id="pkg-facilities-1">
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <ul class="list-unstyled d-flex flex-column gap-2 text-secondary small mb-0" id="pkg-facilities-2">
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Rundown Acara (Itinerary) -->
-            <div class="facility-box shadow-sm">
-              <h2 class="fw-bold mb-3 mb-md-4 text-dark" style="font-size: clamp(1.1rem, 3vw, 1.35rem);"><i class="bi bi-clock-history me-2" style="color: var(--primary-color);"></i>Contoh Rundown / Itinerary Acara</h2>
-              
-              <div class="itinerary-timeline" id="pkg-itinerary">
-              </div>
-
-              <div class="alert mt-3 mb-0 small" style="background-color: rgba(0, 0, 128, 0.05); color: var(--primary-color); border-left: 4px solid var(--primary-color); font-size: 0.85rem;">
-                <i class="bi bi-info-circle-fill me-1"></i> Rundown di atas bersifat fleksibel dan dapat disesuaikan dengan kebutuhan serta jam kumpul panitia Anda.
-              </div>
-            </div>
-
           </div>
 
-          <!-- Right Sidebar Booking Card -->
+          <!-- Right Sidebar Pricing -->
           <div class="col-lg-4">
-            <div class="sticky-sidebar">
-              <div class="card border-0 shadow-sm rounded-4 overflow-hidden p-3 p-sm-4 bg-white">
+            <div class="sidebar-booking-card shadow-sm">
+              <div>
                 <span class="fw-bold small text-uppercase" style="color: var(--primary-color); font-size: 0.78rem;">Estimasi Biaya Hemat</span>
                 <div class="d-flex align-items-baseline gap-1 my-2">
                   <h3 class="fw-bold mb-0" style="color: var(--primary-color); font-size: clamp(1.6rem, 5vw, 2.2rem);" id="pkg-price">Rp 0</h3>
@@ -692,11 +832,11 @@
                   </p>
                 </div>
 
-                <hr class="my-2 border-light-subtle">
+                <hr class="my-3 border-light-subtle">
 
                 <!-- Quick Info Paket -->
-                <div class="my-3">
-                  <label class="form-label small fw-bold text-dark">Informasi Singkat Paket:</label>
+                <div class="mb-3">
+                  <label class="form-label small fw-bold text-dark mb-2">Informasi Singkat Paket:</label>
                   <div class="d-flex align-items-center gap-2 mb-2 small text-secondary">
                     <i class="bi bi-geo-alt" style="color: var(--primary-color);"></i> <span id="pkg-location">Lokasi: Batu / Malang</span>
                   </div>
@@ -707,8 +847,10 @@
                     <i class="bi bi-people" style="color: var(--primary-color);"></i> <span id="pkg-capacity">Kapasitas: 20 - 500+ Peserta</span>
                   </div>
                 </div>
+              </div>
 
-                <!-- CTA Buttons -->
+              <!-- CTA Buttons -->
+              <div>
                 <a id="btn-wa-order" href="#" target="_blank" class="btn btn-custom-accent w-100 py-2 py-sm-3 rounded-pill fw-bold d-flex align-items-center justify-content-center gap-2 shadow-sm mb-2" style="font-size: 0.9rem;">
                   <i class="bi bi-whatsapp fs-5"></i>
                   <span>Pesan / Minta Proposal</span>
@@ -718,20 +860,69 @@
                   Tanya Dulu via WhatsApp
                 </a>
 
-                <div class="text-center mt-3">
+                <div class="text-center mt-2">
                   <small class="text-muted" style="font-size: 0.75rem;">
                     <i class="bi bi-shield-check me-1" style="color: var(--primary-color);"></i> Respon Cepat & Tanpa Biaya Tersembunyi
                   </small>
                 </div>
               </div>
+
             </div>
           </div>
 
         </div>
 
-        <!-- ================================================================= -->
-        <!-- BLOK KNOWLEDGE BASE UNTUK AI SEARCH ENGINES & CRAWLERS            -->
-        <!-- ================================================================= -->
+        <!-- ROW MID 1: FASILITAS PAKET INCLUDED -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="facility-box shadow-sm">
+              <h2 class="fw-bold mb-3" style="color: var(--primary-color); font-size: clamp(1.1rem, 3vw, 1.35rem);"><i class="bi bi-check-circle-fill me-2"></i>Fasilitas Sudah Termasuk (Included):</h2>
+              <div class="row g-3" id="pkg-facilities-grid">
+                <!-- Diisi otomatis oleh JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW MID 1.5: GALERI FOTO KEGIATAN KUSTOM (DI BAWAH FASILITAS) -->
+        <div class="row mb-4" id="pkg-gallery-section">
+          <div class="col-12">
+            <div class="facility-box shadow-sm">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="fw-bold text-dark mb-0" style="font-size: clamp(1.1rem, 3vw, 1.35rem);"><i class="bi bi-images me-2" style="color: var(--primary-color);"></i>Dokumentasi & Galeri Kegiatan</h2>
+                <span class="badge bg-light text-dark border"><i class="bi bi-camera me-1"></i> Photo Highlights</span>
+              </div>
+              <p class="small text-muted mb-3">Momen nyata keseruan, fasilitas, dan atmosfer pelaksanaan paket ini di lapangan:</p>
+
+              <div class="row g-2 g-md-3" id="pkg-gallery-grid">
+                <!-- Diisi otomatis 4 Foto Spesifik sesuai Paket oleh JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW MID 2: RUNDOWN & ITINERARY -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="facility-box shadow-sm">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="fw-bold text-dark mb-0" style="font-size: clamp(1.1rem, 3vw, 1.35rem);"><i class="bi bi-clock-history me-2" style="color: var(--primary-color);"></i>Rundown & Itinerary Kegiatan</h2>
+                <span class="badge bg-light text-dark border"><i class="bi bi-calendar-check me-1"></i> Alur Acara Pro</span>
+              </div>
+              
+              <!-- Container Vertical Timeline -->
+              <div class="rundown-timeline-wrapper" id="pkg-itinerary-container">
+                <!-- Diisi via JS dengan alur garis dan titik vertikal -->
+              </div>
+
+              <div class="alert mt-3 mb-0 small" style="background-color: rgba(0, 0, 128, 0.05); color: var(--primary-color); border-left: 4px solid var(--primary-color); font-size: 0.85rem;">
+                <i class="bi bi-info-circle-fill me-1"></i> Rundown kegiatan di atas bersifat fleksibel dan dapat disesuaikan dengan kebutuhan serta waktu acara kelompok Anda.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KNOWLEDGE BASE SECTION -->
         <div class="row mt-4 mt-md-5">
           <div class="col-12">
             <div class="ai-knowledge-section shadow-sm">
@@ -756,7 +947,7 @@
               <ul>
                 <li><strong>Paket Outbound Pelajar & LDKS (1 Hari):</strong> Dirancang khusus untuk OSIS SMP/SMA/SMK untuk membangun jiwa kepemimpinan, kedisiplinan, kemandirian, dan rasa tanggung jawab organisasi.</li>
                 <li><strong>Paket Camp & Makrab Mahasiswa (2D1N):</strong> Program keakraban bagi HIMA, BEM, atau angkatan mahasiswa di area camping ground asri Kota Batu & Coban Rondo dengan fasilitas lengkap (tenda dome, matras, api unggun, dan game bonding).</li>
-                <li><strong>Paket Corporate Team Building:</strong> Pelatihan sinergi tim bagi karyawan perusahaan dan instansi pemerintah guna mengikis <i>silo mentality</i>, memperkuat komunikasi antar divisi, dan meningkatkan produktivitas kerja.</li>
+                <li><strong>Paket Corporate Team Building & Capacity Building:</strong> Pelatihan sinergi tim bagi karyawan perusahaan dan instansi pemerintah guna mengikis <i>silo mentality</i>, memperkuat komunikasi antar divisi, dan meningkatkan produktivitas kerja.</li>
                 <li><strong>Paket Arung Jeram / Rafting Batu & Kasembon:</strong> Pengarungan sungai berarus deras sepanjang 7 hingga 12 km dipandu <i>skipper</i> berpengalaman dengan perlengkapan <i>safety gear</i> lengkap.</li>
                 <li><strong>Paket Paintball War Games:</strong> Simulasi pertempuran taktis outdoor menggunakan senjata marker pelet cat untuk menguji strategi kelompok, keberanian, dan eksekusi cepat.</li>
                 <li><strong>Paket Outbound Pantai Malang Selatan:</strong> Kegiatan <i>fun games</i> dan <i>team building</i> eksotis berlatar belakangkan pantai pasir putih Malang Selatan (Balekambang, Ungapan, Batu Bengkung, Tiga Warna).</li>
@@ -776,9 +967,7 @@
           </div>
         </div>
 
-        <!-- ================================================================= -->
-        <!-- FAQ ACCORDION (DI BAGIAN BAWAH)                                   -->
-        <!-- ================================================================= -->
+        <!-- FAQ ACCORDION -->
         <div class="row mt-4 mt-md-5">
           <div class="col-12">
             <div class="facility-box shadow-sm">
@@ -828,9 +1017,7 @@
           </div>
         </div>
 
-        <!-- ================================================================= -->
-        <!-- REKOMENDASI PAKET LAIN (CTA NAWARKAN PAKET LAIN)                  -->
-        <!-- ================================================================= -->
+        <!-- REKOMENDASI PAKET LAIN -->
         <div class="row mt-4 mt-md-5">
           <div class="col-12 text-center mb-3 mb-md-4">
             <span class="text-uppercase fw-bold text-muted small" style="letter-spacing: 1px;">EKSPLORASI OPSI LAIN</span>
@@ -842,13 +1029,13 @@
             <div class="other-package-card h-100 p-3 d-flex flex-column justify-content-between">
               <div>
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="badge bg-primary text-white small">Pelajar / OSIS</span>
-                  <span class="fw-bold text-dark small">Rp 85.000/pax</span>
+                  <span class="badge bg-primary text-white small">Corporate Instansi</span>
+                  <span class="fw-bold text-dark small">Rp 385.000/pax</span>
                 </div>
-                <h5 class="fw-bold text-dark fs-6 mb-2">Paket LDKS & Leadership</h5>
-                <p class="text-muted small mb-3">Latihan kepemimpinan siswa dan mahasiswa dengan metode simulasi permainan seru.</p>
+                <h5 class="fw-bold text-dark fs-6 mb-2">Capacity Building 2D1N</h5>
+                <p class="text-muted small mb-3">Penguatan kapasitas staf instansi menginap di hotel/resort Batu dipandu trainer BNSP.</p>
               </div>
-              <a href="detail-paket.html?type=ldks" class="btn btn-outline-navy w-100 rounded-pill btn-sm fw-bold">Lihat Detail Paket <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="detail-paket.html?type=corporate-capacity" class="btn btn-outline-navy w-100 rounded-pill btn-sm fw-bold">Lihat Detail Paket <i class="bi bi-arrow-right ms-1"></i></a>
             </div>
           </div>
 
@@ -856,13 +1043,13 @@
             <div class="other-package-card h-100 p-3 d-flex flex-column justify-content-between border-primary">
               <div>
                 <div class="d-flex justify-content-between align-items-center mb-2">
-                  <span class="badge text-white small" style="background-color: var(--accent-color);">HIMA / BEM</span>
-                  <span class="fw-bold text-dark small">Rp 150.000/pax</span>
+                  <span class="badge text-white small" style="background-color: var(--accent-color);">Executive Gathering</span>
+                  <span class="fw-bold text-dark small">Rp 750.000/pax</span>
                 </div>
-                <h5 class="fw-bold text-dark fs-6 mb-2">Paket Camp & Makrab Kampus</h5>
-                <p class="text-muted small mb-3">Malam keakraban mahasiswa 2D1N di Batu dengan tenda, api unggun, dan game bonding.</p>
+                <h5 class="fw-bold text-dark fs-6 mb-2">Executive Gathering 3D2N</h5>
+                <p class="text-muted small mb-3">Apresiasi karyawan full fasilitas: hotel Bintang, Gala Dinner, Outbound, & City Tour Batu.</p>
               </div>
-              <a href="detail-paket.html?type=makrab" class="btn btn-custom-accent w-100 rounded-pill btn-sm fw-bold">Lihat Detail Paket <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="detail-paket.html?type=corporate-gathering" class="btn btn-custom-accent w-100 rounded-pill btn-sm fw-bold">Lihat Detail Paket <i class="bi bi-arrow-right ms-1"></i></a>
             </div>
           </div>
 
@@ -871,12 +1058,12 @@
               <div>
                 <div class="d-flex justify-content-between align-items-center mb-2">
                   <span class="badge bg-info text-white small">Adventure</span>
-                  <span class="fw-bold text-dark small">Rp 210.000/pax</span>
+                  <span class="fw-bold text-dark small">Rp 325.000/pax</span>
                 </div>
-                <h5 class="fw-bold text-dark fs-6 mb-2">Paket Outbound + Rafting Batu</h5>
-                <p class="text-muted small mb-3">Kombinasi game tim disambung pengarungan arung jeram menantang di sungai Batu.</p>
+                <h5 class="fw-bold text-dark fs-6 mb-2">Corporate + Jeep Tour</h5>
+                <p class="text-muted small mb-3">Kombinasi Fun Outbound Games dengan wisata petualangan Jeep Offroad 4x4 Batu/Bromo.</p>
               </div>
-              <a href="detail-paket.html?type=rafting" class="btn btn-outline-navy w-100 rounded-pill btn-sm fw-bold">Lihat Detail Paket <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="detail-paket.html?type=corporate-jeep" class="btn btn-outline-navy w-100 rounded-pill btn-sm fw-bold">Lihat Detail Paket <i class="bi bi-arrow-right ms-1"></i></a>
             </div>
           </div>
 
@@ -905,7 +1092,7 @@
             Vendor spesialis outbound, LDKS, Makrab, Rafting, Outbound Pantai Malang, dan Camping ground terpercaya di Kota Batu & Malang. Siap melayani kegiatan sekolah, kampus, dan instansi.
           </p>
           <div class="small text-white">
-            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2" style="color: #FF8080;"></i> Jl. Raya Ir. Soekarno, Kota Batu, Jawa Timur 65326</p>
+            <p class="mb-2"><i class="bi bi-geo-alt-fill me-2" style="color: #FF8080;"></i> Temas, Kec. Batu, Kota Batu, Jawa Timur 65315</p>
             <p class="mb-2"><i class="bi bi-whatsapp me-2" style="color: #FF8080;"></i> WhatsApp: <a href="https://wa.me/6282211221909" target="_blank" class="text-white text-decoration-none fw-semibold">+62 822-1122-1909</a></p>
           </div>
         </div>
@@ -960,15 +1147,212 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- SCRIPT DINAMIS PENGATUR KONTEN DETAIL PAKET & REKOMENDASI PAKET LAIN -->
+  <!-- SCRIPT DINAMIS PENGATUR KONTEN DETAIL PAKET, GALERI FOTO & REKOMENDASI PAKET LAIN -->
   <script>
-    // Fungsi Parser Sederhana untuk Mengubah Tanda Bintang (*teks*) menjadi Cetak Miring <i>teks</i>
     function parseStarText(text) {
       if (!text) return '';
       return text.replace(/\*(.*?)\*/g, '<i>$1</i>');
     }
 
+    function getFacilityBootstrapIcon(text) {
+      const lower = text.toLowerCase();
+      if (lower.includes('trainer') || lower.includes('fasilitator') || lower.includes('instruktur') || lower.includes('master')) return 'bi-person-badge';
+      if (lower.includes('lapangan') || lower.includes('ground') || lower.includes('venue') || lower.includes('arena') || lower.includes('hotel') || lower.includes('resort') || lower.includes('villa')) return 'bi-building';
+      if (lower.includes('game') || lower.includes('peralatan') || lower.includes('senjata') || lower.includes('gear') || lower.includes('jeep') || lower.includes('ropes')) return 'bi-controller';
+      if (lower.includes('sound') || lower.includes('banner') || lower.includes('panggung') || lower.includes('gala') || lower.includes('entertainment')) return 'bi-megaphone';
+      if (lower.includes('makan') || lower.includes('kuliner') || lower.includes('snack') || lower.includes('break') || lower.includes('bbq') || lower.includes('dinner') || lower.includes('lunch')) return 'bi-cup-hot';
+      if (lower.includes('air') || lower.includes('minum') || lower.includes('drink') || lower.includes('kelapa')) return 'bi-droplet';
+      if (lower.includes('p3k') || lower.includes('medis') || lower.includes('safety') || lower.includes('asuransi')) return 'bi-shield-plus';
+      if (lower.includes('foto') || lower.includes('video') || lower.includes('dokumentasi') || lower.includes('drone')) return 'bi-camera-reels';
+      if (lower.includes('sertifikat') || lower.includes('proposal') || lower.includes('faktur') || lower.includes('dokumen') || lower.includes('sph') || lower.includes('modul')) return 'bi-file-earmark-text';
+      if (lower.includes('tenda') || lower.includes('matras') || lower.includes('camp') || lower.includes('sleeping')) return 'bi-house-heart';
+      if (lower.includes('api unggun') || lower.includes('lampu')) return 'bi-fire';
+      if (lower.includes('shuttle') || lower.includes('transport') || lower.includes('bus')) return 'bi-bus-front';
+      if (lower.includes('bilas') || lower.includes('toilet') || lower.includes('shower')) return 'bi-water';
+      return 'bi-check-circle-fill';
+    }
+
     const packageDatabase = {
+      'corporate-capacity': {
+        name: 'Paket Corporate Capacity Building (2D1N)',
+        category: 'Corporate & Instansi',
+        badge: 'Paling Diminati BUMN',
+        price: 'Rp 385.000',
+        numericPrice: '385000',
+        unit: '/ peserta',
+        location: 'Hotel / Resort Bintang Kota Batu',
+        duration: '2 Hari 1 Malam',
+        capacity: '30 - 500+ Peserta',
+        img: 'assets/img/paket-outbound-corporate-gathering-perusahaan-malang-batu.webp',
+        desc: 'Program *Capacity Building* komprehensif menginap 2D1N untuk jajaran karyawan instansi dan BUMN. Mengintegrasikan pelatihan kepemimpinan, komunikasi linier, *High Impact Teamwork*, dan penyegaran mental di lingkungan hotel/resort sejuk Kota Batu.',
+        gallery: [
+          { src: 'assets/img/paket-outbound-corporate-gathering-perusahaan-malang-batu.webp', caption: 'Sesi Fun Outbound & Capacity Building' },
+          { src: 'assets/img/kegiatan-outbound-team-building-kabupaten-malang.webp', caption: 'High Impact Teamwork Games' },
+          { src: 'assets/img/Karyawan-berkumpul-untuk-gathering.webp', caption: 'Gathering Karyawan Instansi & BUMN' },
+          { src: 'assets/img/paket-outbound-team-building-perusahaan-batu-malang.webp', caption: 'Kebersamaan & Pembagian Doorprize' }
+        ],
+        facilities: [
+          'Menginap 1 Malam di Hotel / Resort Pilihan Kota Batu',
+          'Master Trainer Sertifikasi BNSP & Facilitator Senior',
+          'High Impact Team Building & Problem Solving Simulation',
+          'Sewa Lapangan Rumput Exclusive & Sound System Outdoor',
+          'Makan 3x Prasmanan Resto & Coffee Break 2x',
+          'Banner Kegiatan Spanduk Custom & Backdrop Indoor',
+          'Dokumentasi Foto & Video High Resolution (Google Drive)',
+          'Legalitas Dokumen Instansi Lengkap (SPH, Proposal & e-Faktur)'
+        ],
+        itinerary: [
+          { time: 'Hari 1 - 13.00 WIB', title: 'Check-In Hotel/Resort & Opening Ceremony', desc: 'Rombongan tiba di lokasi resort Kota Batu, proses registrasi kamar hotel, pembukaan resmi oleh manajemen perusahaan & Master Trainer BNSP.' },
+          { time: 'Hari 1 - 14.30 WIB', title: 'High Impact Team Building & Problem Solving Games', desc: 'Sesi outdoor outbound berfokus pada penghancuran *silo mentality*, efisiensi alur kerja interdivisi, serta penguatan sinergi kelompok.' },
+          { time: 'Hari 1 - 19.00 WIB', title: 'Dinner Prasmanan & Executive Sharing Session', desc: 'Santap makan malam bersama di resto hotel dilanjutkan sesi refleksi kepemimpinan santai (*Night Debriefing*) bersama tim manajemen.' },
+          { time: 'Hari 2 - 06.30 WIB', title: 'Morning Energizer & Breakfast', desc: 'Peregangan badan menikmati udara segar pagi pegunungan Batu, dilanjutkan sarapan pagi prasmanan variatif di restoran hotel.' },
+          { time: 'Hari 2 - 08.30 WIB', title: 'Grand Synergy Challenge & Final Commitment', desc: 'Simulasi strategi puncak berskala besar, penandatanganan komitmen kerja bersama, penyerahan award kelompok terbaik, dan check-out kepulangan.' }
+        ]
+      },
+      'corporate-gathering': {
+        name: 'Executive Outbound & Gathering (3D2N)',
+        category: 'Executive Gathering',
+        badge: 'Rekomendasi Executive',
+        price: 'Rp 750.000',
+        numericPrice: '750000',
+        unit: '/ peserta',
+        location: 'Hotel Bintang 3/4 Kota Batu',
+        duration: '3 Hari 2 Malam',
+        capacity: '40 - 1000+ Peserta',
+        img: 'assets/img/paket-outbound-perusahaan-surabaya-ke-malang-batu.webp',
+        desc: 'Paket eksklusif apresiasi kinerja tahunan karyawan perusahaan. Menggabungkan akomodasi hotel bintang 3/4 di Kota Batu, *Team Building Outbound*, acara keakraban *Gala Dinner* dengan panggung hiburan musik, serta wisata keliling (*City Tour*) Kota Batu.',
+        gallery: [
+          { src: 'assets/img/Karyawan-memakai-dress-code-batik-simpel-saat-gathering-kantor.webp', caption: 'Gala Dinner & Dresscode Gathering' },
+          { src: 'assets/img/Karyawan-berkumpul-untuk-gathering.webp', caption: 'Malam Apresiasi Perusahaan' },
+          { src: 'assets/img/kekompakan-pegawai-outbound.webp', caption: 'Simulasi Kekompakan Pegawai' },
+          { src: 'assets/img/rekomendasi-lokasi-outbound-terbaik-batu-malang.webp', caption: 'Venue Outdoor & Resort Hotel' }
+        ],
+        facilities: [
+          'Akomodasi Hotel Bintang 3/4 di Kota Batu (2 Malam)',
+          'Gala Dinner Exclusive & Panggung Hiburan Sound System',
+          'Live Music Electone / Band Perform & MC Event',
+          'Full Team Building Outbound Program + Trainer BNSP',
+          'Makan Prasmanan 6x & Coffee Break 4x',
+          'Paket Wisata City Tour & Pusat Oleh-Oleh Khas Batu',
+          'Bus Pariwisata Executive & Shuttle Transport',
+          'Dokumentasi Foto, Video & Highlight Reel Cinematic'
+        ],
+        itinerary: [
+          { time: 'Hari 1 - 14.00 WIB', title: 'Check-In Hotel, Rest & Welcome Drink', desc: 'Proses pembagian kamar hotel bintang di Batu, menikmati fasilitas hotel, dan penyambutan hangat selamat datang.' },
+          { time: 'Hari 1 - 18.30 WIB', title: 'Welcome Dinner & Internal Alignment', desc: 'Makan malam pembuka di ruang banquet hotel, pengenalan susunan acara 3 hari, dan *ice breaking* ringan.' },
+          { time: 'Hari 2 - 08.00 WIB', title: 'Full Day Team Building & Fun Leadership Outbound', desc: 'Rangkaian simulasi dinamika kelompok outdoor di lapangan rumput asri resort Batu dipandu tim instruktur profesional.' },
+          { time: 'Hari 2 - 18.30 WIB', title: 'Grand Gala Dinner, Awarding Night & Live Music', desc: 'Malam puncak apresiasi perusahaan: makan malam spesial, *doorprize*, awarding karyawan berprestasi, dan panggung musik meriah.' },
+          { time: 'Hari 3 - 08.30 WIB', title: 'City Tour Batu, Belanja Oleh-Oleh & Kepulangan', desc: 'Kunjungan ke destinasi wisata unggulan Batu, wisata belanja oleh-oleh khas apel & keripik, lalu persiapan kembali ke kota asal.' }
+        ]
+      },
+      'corporate-jeep': {
+        name: 'Corporate Fun Gathering + Jeep Tour',
+        category: 'Fun & Adventure',
+        badge: 'Seru & Adventure',
+        price: 'Rp 325.000',
+        numericPrice: '325000',
+        unit: '/ peserta',
+        location: 'Coban Rais / Bromo / Batu',
+        duration: '1 Hari Full Day',
+        capacity: '20 - 300 Peserta',
+        img: 'assets/img/paket-outbound-adventure-jeep-offroad-poncokusumo-malang.webp',
+        desc: 'Suntikan energi baru bagi staf dan manajemen dengan perpaduan permainan *Fun Outbound Games* yang menyegarkan dilanjutkan petualangan seru melibas rute offroad menggunakan *Jeep 4x4* di kawasan Batu atau Bromo.',
+        gallery: [
+          { src: 'assets/img/paket-outbound-adventure-jeep-offroad-poncokusumo-malang.webp', caption: 'Armada Jeep Offroad 4x4' },
+          { src: 'assets/img/kegiatan-outbound-adventure-kabupaten-malang.webp', caption: 'Petualangan Trail & Jeep Track' },
+          { src: 'assets/img/panduan-outbound-adventure-jeep-tour-surabaya-ke-malang.webp', caption: 'Jelajah Alam Offroad Batu/Bromo' },
+          { src: 'assets/img/rekomendasi-kegiatan-outbound-adventure-rafting-jeep-malang-batu.webp', caption: 'Spot Foto Estetik Jeep Tour' }
+        ],
+        facilities: [
+          'Fun Outbound Team Building Games & Fasilitator',
+          'Sewa Armada Jeep Offroad 4x4 (Isi 4 Orang / Jeep)',
+          'Driver Jeep Offroad Berpengalaman & BBM Complete',
+          'Tiket Masuk Destinasi Wisata Offroad & Outbound Ground',
+          'Makan Siang Prasmanan Khas Pedesaan & Coffee Break',
+          'Dokumentasi Foto & Video Drone Aerial Shot',
+          'Tim P3K Medis & Asuransi Keselamatan',
+          'Banner Kegiatan Spanduk Rombongan'
+        ],
+        itinerary: [
+          { time: '08.00 - 08.30 WIB', title: 'Kedatangan & Ice Breaking Fun Games', desc: 'Kumpul di basecamp outbound Batu, sesi energizer pembakar semangat, serta game penyegar suasana kebersamaan.' },
+          { time: '08.30 - 11.00 WIB', title: 'Beach / Pine Team Synergy Outbound', desc: 'Permainan tim interaktif untuk mempererat kekompakan dan melatih komunikasi efektif di area outdoor.' },
+          { time: '11.00 - 12.30 WIB', title: 'Lunch Break Prasmanan Pedesaan', desc: 'Istirahat dan santap makan siang prasmanan masakan tradisional pedesaan Jawa Timur yang lezat.' },
+          { time: '12.30 - 15.30 WIB', title: 'Offroad Jeep Tour Adventure Expedition', desc: 'Sensasi melibas trek lumpur, sungai, dan perbukitan dengan armada Jeep 4x4 menuju spot pemandangan alam memukau.' },
+          { time: '15.30 - 16.00 WIB', title: 'Foto Bersama Armada Jeep & Penutupan', desc: 'Sesi foto aerial video drone bersama seluruh deretan Jeep offroad, penutupan acara, dan persiapan pulang.' }
+        ]
+      },
+      'corporate-solving': {
+        name: 'Corporate Outbound & Problem Solving',
+        category: 'Pelatihan Psikologi Kerja',
+        badge: 'Fokus Evaluasi Tim',
+        price: 'Rp 175.000',
+        numericPrice: '175000',
+        unit: '/ peserta',
+        location: 'Resort / Outbound Ground Batu',
+        duration: '1 Hari Full Day',
+        capacity: '25 - 500 Peserta',
+        img: 'assets/img/paket-outbound-training-efektivitas-kepemimpinan-tim.webp',
+        desc: 'Pelatihan terstruktur outdoor berbasis simulasi kasus nyata untuk mengikis ketegangan antar departemen, mengidentifikasi hambatan komunikasi, serta membentuk pola pikir penyelesai masalah (*Problem Solving*) yang taktis.',
+        gallery: [
+          { src: 'assets/img/permainan-motivasi-tim.webp', caption: 'Evaluasi & Motvasi Kelompok' },
+          { src: 'assets/img/jasa-outbound-malang-team-building.webp', caption: 'Problem Solving Simulation' },
+          { src: 'assets/img/per-departemen-outbound-gathering.webp', caption: 'Sinergi Lintas Departemen' },
+          { src: 'assets/img/permainan-kepemimpinan-tim.webp', caption: 'Sesi Debriefing & Leadership' }
+        ],
+        facilities: [
+          'Master Trainer Psychotherapy / Experiential Learning BNSP',
+          'Simulasi Case Problem Solving & High Impact Synergy',
+          'Sewa Lapangan Exclusive Resort di Batu & Peralatan Game',
+          'Sesi Debriefing Mendalam Metode 4D (Did, Discuss, Discover, Do)',
+          'Coffee Break 1x & Makan Siang Prasmanan Resto',
+          'Dokumentasi Foto & Resume Evaluasi Kelompok',
+          'Proposal Resmi, Surat Penawaran Harga (SPH) & e-Faktur Pajak',
+          'Tim P3K Medis & Safety Patrol'
+        ],
+        itinerary: [
+          { time: '08.00 - 08.30 WIB', title: 'Opening & Alignment Goal Setting', desc: 'Pembukaan oleh manajemen dan Master Trainer, penjelasan filosofi simulasi serta pentingnya mentalitas penyelesai masalah.' },
+          { time: '08.30 - 11.30 WIB', title: 'Problem Solving Simulation & Strategy Game', desc: 'Siswa/karyawan dihadapkan pada skenario game ketat yang membutuhkan analisis risiko, komunikasi jernih, dan eksekusi cepat.' },
+          { time: '11.30 - 13.00 WIB', title: 'Lunch & Relax Session', desc: 'Makan siang prasmanan resto, waktu ibadah, dan obrolan santai antar rekan kerja.' },
+          { time: '13.00 - 15.00 WIB', title: 'Silo Breaking & Interdepartmental Synergy Challenge', desc: 'Game komprehensif yang memaksa gabungan dari beberapa divisi kantor untuk menyatukan langkah mencapai target bersama.' },
+          { time: '15.00 - 15.30 WIB', title: 'Executive Debriefing & Action Plan Signing', desc: 'Ulasan mendalam oleh trainer menghubungkan dinamika game dengan kasus nyata kantor, perumusan komitmen tindakan, dan penutupan.' }
+        ]
+      },
+      'corporate-leadership': {
+        name: 'Strategic Leadership Camp (2D1N)',
+        category: 'Managerial & Supervisor',
+        badge: 'Manajerial & Leader',
+        price: 'Rp 450.000',
+        numericPrice: '450000',
+        unit: '/ peserta',
+        location: 'Leadership Camp Batu / Songgoriti',
+        duration: '2 Hari 1 Malam',
+        capacity: '20 - 150 Peserta',
+        img: 'assets/img/kaderisasi-organisasi-outbound.webp',
+        desc: 'Penggemblengan intensif khusus untuk level Manajer, Supervisor, dan calon pemimpin masa depan (*Future Leader*). Mengombinasikan *High Ropes Challenge*, *Crisis Management Games*, serta modul evaluasi pola kepemimpinan.',
+        gallery: [
+          { src: 'assets/img/kaderisasi-organisasi-outbound.webp', caption: 'Strategic Leadership Camp' },
+          { src: 'assets/img/permainan-kepemimpinan-tim.webp', caption: 'High Ropes & Team Leadership' },
+          { src: 'assets/img/standard-keselamatan-k3-kegiatan-outbound-malang.webp', caption: 'Standard Safety K3 Leadership' },
+          { src: 'assets/img/paket-outbound-training-efektivitas-kepemimpinan-tim.webp', caption: 'Evaluasi Profile Assessment Leader' }
+        ],
+        facilities: [
+          'Akomodasi Villa Exclusive / Leadership Camp Ground Batu',
+          'Master Trainer Leadership Certified BNSP & Psikolog',
+          'High Ropes Challenge (Flying Fox, Two Line Bridge, High Wall)',
+          'Modul Evaluasi & Profile Assessment Kepemimpinan Peserta',
+          'Makan 3x Prasmanan & Coffee Break 2x',
+          'Peralatan Safety Rope Sertifikasi UIAA / CE',
+          'Dokumentasi Foto & Video Resume Kegiatan',
+          'Dokumen Penawaran Legal Instansi / Perusahaan'
+        ],
+        itinerary: [
+          { time: 'Hari 1 - 13.00 WIB', title: 'Check-In Camp & Psychological Warm-Up', desc: 'Registrasi peserta level manajerial, pengondisian kamar/villa, dan penjelasan indikator penilaian kepemimpinan.' },
+          { time: 'Hari 1 - 14.30 WIB', title: 'High Ropes & Personal Courage Challenge', desc: 'Tantangan tali tinggi (*flying fox, high bridge*) untuk menguji keberanian mengambil keputusan di bawah tekanan.' },
+          { time: 'Hari 1 - 19.00 WIB', title: 'Night Crisis Management & Strategic Discussion', desc: 'Makan malam hangat, dilanjutkan simulasi penanganan krisis manajemen malam hari dan diskusi strategi.' },
+          { time: 'Hari 2 - 06.00 WIB', title: 'Morning Fitness & Breakfast', desc: 'Senam pagi kebugaran di alam terbuka dilanjutkan sarapan pagi hangat.' },
+          { time: 'Hari 2 - 08.00 WIB', title: 'Strategic Decision Simulation & Leadership Debrief', desc: 'Simulasi eksekusi strategi kelompok puncak, pemaparan hasil penilaian profil kepemimpinan, dan acara penutupan.' }
+        ]
+      },
       'ldks': {
         name: 'Paket LDKS / LDKM Pelajar Malang Batu (1 Hari)',
         category: 'Edukasi & Kepemimpinan',
@@ -979,27 +1363,31 @@
         location: 'Kota Batu / Malang Ground',
         duration: '1 Hari (Half/Full Day)',
         capacity: '30 - 500+ Peserta',
-        img: 'assets/img/paketldks.webp',
+        img: 'assets/img/paket-outbound-edukasi-ldks-sekolah-malang-batu.webp',
         desc: 'Program Latihan Dasar Kepemimpinan Siswa (*LDKS*) dan Latihan Dasar Kepemimpinan Mahasiswa (*LDKM*) yang dirancang khusus dengan metode *Experiential Learning*. Mengombinasikan game simulasi kepemimpinan, *Problem Solving*, serta *Character Building* di alam terbuka.',
-        fac1: [
+        gallery: [
+          { src: 'assets/img/kegiatan-ldks-siswa-sekolah-turen-malang.webp', caption: 'Latihan Kedisiplinan LDKS' },
+          { src: 'assets/img/kaderisasi-organisasi-outbound.webp', caption: 'Simulasi Kaderisasi & Leadership' },
+          { src: 'assets/img/paket-outbound-edukasi-ldks-sekolah-malang-batu.webp', caption: 'Character Building di Lapangan' },
+          { src: 'assets/img/permainan-kepemimpinan-tim.webp', caption: 'Teamwork Games OSIS/HIMA' }
+        ],
+        facilities: [
           'Master Trainer & Fasilitator Energik (Sertifikasi BNSP)',
           'Sewa Lapangan & Izin Ground Outbound Batu/Malang',
           'Peralatan Game Simulasi Outbound Complete Set',
-          'Sound System Outdoor & Banner Acara Custom'
-        ],
-        fac2: [
+          'Sound System Outdoor & Banner Acara Custom',
           'Air Mineral / Refill Galon Selama Acara',
-          'Tim P3K Medis & Prosedur Safety Standard *Zero Accident*',
+          'Tim P3K Medis & Prosedur Safety Standard Zero Accident',
           'Dokumentasi Foto & Video Kegiatan (Google Drive)',
           'Sertifikat Peserta & Proposal Legalitas Instansi'
         ],
         itinerary: [
-          { time: '07.30 - 08.00 WIB', title: 'Kedatangan & Registrasi Peserta', desc: 'Tiba di ground outbound Batu/Malang, pengecekan kehadiran, dan pembagian kelompok.' },
-          { time: '08.00 - 09.00 WIB', title: 'Opening Ceremony & Ice Breaking', desc: 'Pembukaan resmi oleh Master Trainer, penyatuan energi, dan game pencair suasana interaktif.' },
-          { time: '09.00 - 11.30 WIB', title: 'Simulasi Leadership & Character Building', desc: 'Rangkaian game simulasi *problem solving*, komunikasi efektif, dan *trust building*.' },
-          { time: '11.30 - 13.00 WIB', title: 'ISHOMA (Istirahat, Sholat, Makan)', desc: 'Makan siang bersama sajian khas dan waktu ibadah.' },
-          { time: '13.00 - 15.00 WIB', title: 'Final Challenge / Synergy Game', desc: 'Permainan puncak yang membutuhkan kontribusi penuh dan strategi seluruh kelompok.' },
-          { time: '15.00 - 15.30 WIB', title: 'Debriefing & Penutupan', desc: 'Ulasan pesan moral/filosofi dari setiap game oleh trainer, penyerahan penghargaan, dan foto bersama.' }
+          { time: '07.30 - 08.00 WIB', title: 'Kedatangan & Registrasi Peserta', desc: 'Peserta tiba di area ground outbound Batu/Malang, dilanjutkan proses absen registrasi ulang, pembagian kelompok, serta pengondisian barang pribadi.' },
+          { time: '08.00 - 09.00 WIB', title: 'Opening Ceremony & Energizer Ice Breaking', desc: 'Pembukaan resmi oleh Master Trainer Sertifikasi BNSP, menyanyikan lagu Indonesia Raya, pengenalan tata tertib, serta *ice breaking* penyemat semangat.' },
+          { time: '09.00 - 11.30 WIB', title: 'Simulasi Leadership & Character Building', desc: 'Rangkaian simulasi permainan kepemimpinan mencakup *Problem Solving*, *Effective Communication*, *Trust Building*, dan *Strategic Planning*.' },
+          { time: '11.30 - 13.00 WIB', title: 'ISHOMA (Istirahat, Sholat & Makan Siang)', desc: 'Istirahat penuh untuk ibadah sholat dan menikmati santap makan siang bersama menu gizi seimbang untuk memulihkan energi peserta.' },
+          { time: '13.00 - 15.00 WIB', title: 'Final Big Strategy Challenge', desc: 'Simulasi permainan puncak berskala besar (*Synergy Challenge*) yang menguji ketahanan mental, kerja sama tim lintas kelompok, serta loyalitas organisasi.' },
+          { time: '15.00 - 15.30 WIB', title: 'Debriefing, Evaluasi & Closing Ceremony', desc: 'Ulasan makna filosofi dari seluruh game, pengulasan *character building*, penyerahan piagam/sertifikat, pembagian doorprize, dan foto bersama.' }
         ]
       },
       'makrab': {
@@ -1012,26 +1400,30 @@
         location: 'Camping Ground Batu / Coban Rondo',
         duration: '2 Hari 1 Malam',
         capacity: '25 - 300 Peserta',
-        img: 'assets/img/paketcamp.webp',
+        img: 'assets/img/paket-outbound-coban-rondo-batu-malang.webp',
         desc: 'Malam keakraban hangat dan seru untuk HIMA, BEM, atau angkatan mahasiswa di Batu. Dilengkapi dengan fasilitas *camping ground* asri, tenda dome, game kebersamaan, dan sesi api unggun.',
-        fac1: [
+        gallery: [
+          { src: 'assets/img/paket-outbound-coban-rondo-batu-malang.webp', caption: 'Camping Ground Coban Rondo Batu' },
+          { src: 'assets/img/sunset-pantai-api-unggun.webp', caption: 'Sesi Api Unggun & Malam Keakraban' },
+          { src: 'assets/img/Ilustrasi-tenda-dan-perlengkapan-rapat-strategi-pinggir-pantai.webp', caption: 'Tenda Dome & Perlengkapan Camp' },
+          { src: 'assets/img/kegiatan-team-building-hutan-pinus-poncokusumo.webp', caption: 'Fun Games Hutan Pinus' }
+        ],
+        facilities: [
           'Area Camping Ground & Tiket Masuk Wisata',
           'Tenda Dome Waterproof, Matras & Sleeping Bag',
-          'Fun Games Kebersamaan & *Dynamic Bonding*',
-          'Sound System Portabel & Lampu Penerangan Camp'
-        ],
-        fac2: [
+          'Fun Games Kebersamaan & Dynamic Bonding',
+          'Sound System Portabel & Lampu Penerangan Camp',
           'Makan 3x Prasmanan Khas Camp & Air Mineral',
           'Sesi Api Unggun, Jagung Bakar / Snack Malam',
-          'Tim Pendamping *Field Support* 24 Jam & P3K',
+          'Tim Pendamping Field Support 24 Jam & P3K',
           'Dokumentasi Foto Kegiatan High Quality'
         ],
         itinerary: [
-          { time: 'Hari 1 - 14.00 WIB', title: 'Check-In & Pembagian Tenda', desc: 'Tiba di lokasi camping ground Batu, pengondisian barang peserta, dan penataan tenda.' },
-          { time: 'Hari 1 - 15.30 WIB', title: 'Fun Games Kebersamaan', desc: 'Permainan santai di lapangan rumput untuk memecah kekakuan antar anggota.' },
-          { time: 'Hari 1 - 19.00 WIB', title: 'Malam Keakraban & Api Unggun', desc: 'Sesi ramah tamah, penampilan seni/bakat per kelompok, api unggun, dan BBQ malam.' },
-          { time: 'Hari 2 - 06.00 WIB', title: 'Senam Pagi & Sarapan', desc: 'Peregangan tubuh segar udara pegunungan dan sarapan hangat bersama.' },
-          { time: 'Hari 2 - 08.00 WIB', title: 'Outbound Synergy & Closing Ceremony', desc: 'Permainan penutup pemutus sekat sosial, refleksi, dan kepulangan.' }
+          { time: 'Hari 1 - 14.00 WIB', title: 'Check-In Camping Ground & Alokasi Tenda', desc: 'Rombongan tiba di lokasi *camping ground*, orientasi medan, dan pembagian tenda dome waterproof beserta perlengkapan tidur (matras & sleeping bag).' },
+          { time: 'Hari 1 - 15.30 WIB', title: 'Fun Bonding Games & Social Mixer', desc: 'Permainan santai outdoor di lapangan rumput untuk mencairkan ketegangan, mempercepat pengenalan antar anggota, serta membangun atmosfer keakraban.' },
+          { time: 'Hari 1 - 19.00 WIB', title: 'Malam Keakraban, Api Unggun & Panggung Seni', desc: 'Santap makan malam prasmanan khas camp, penyalaan api unggun utama, penampilan seni kreasi antar kelompok, serta ajang ramah tamah hangat.' },
+          { time: 'Hari 2 - 06.00 WIB', title: 'Peregangan Udara Segar & Sarapan Bersama', desc: 'Senam kesegaran jasmani di pagi hari menikmati udara dingin khas pegunungan Batu, dilanjutkan sarapan pagi prasmanan hangat.' },
+          { time: 'Hari 2 - 08.00 WIB', title: 'Outbound Synergy Challenge & Kepulangan', desc: 'Game penutup pemutus sekat sosial (*Bridge of Trust*), sesi *debriefing*, pembersihan area camp (*Operasi Semut*), dan persiapan kepulangan.' }
         ]
       },
       'corporate': {
@@ -1044,26 +1436,30 @@
         location: 'Resort / Hotel / Outdoor Batu',
         duration: '1 Hari (Full Day)',
         capacity: '30 - 1000+ Peserta',
-        img: 'assets/img/paketcorporate.webp',
+        img: 'assets/img/paket-outbound-team-building-perusahaan-batu-malang.webp',
         desc: 'Program *team building* berdampak tinggi untuk meningkatkan sinergi, budaya kerja kolaboratif, dan motivasi karyawan instansi maupun perusahaan swasta di suasana pegunungan Batu Malang.',
-        fac1: [
+        gallery: [
+          { src: 'assets/img/paket-outbound-team-building-perusahaan-batu-malang.webp', caption: 'Corporate Team Building Outbound' },
+          { src: 'assets/img/kegiatan-outbound-team-building-kabupaten-malang.webp', caption: 'High Impact Teamwork Simulation' },
+          { src: 'assets/img/kekompakan-pegawai-outbound.webp', caption: 'Kekompakan Pegawai & Instansi' },
+          { src: 'assets/img/jasa-outbound-malang-team-building.webp', caption: 'Problem Solving Games Batu' }
+        ],
+        facilities: [
           'Master Trainer & Senior Facilitator BNSP',
           'High Impact Team Synergy & Leadership Games',
           'Sewa Venue Lapangan Exclusive Rumput Luas di Batu',
-          'Sound System Standard Event & Banner Perusahaan'
-        ],
-        fac2: [
-          'Coffee Break 1x & Makan Siang Prasmanan Hotel/Resto',
+          'Sound System Standard Event & Banner Perusahaan',
+          'Coffee Break 1x & Makan Siang Prasmanan Resto',
           'Tim Medis P3K & Asuransi Kegiatan',
-          'Dokumentasi Foto & Video Cinematic (Drone Optional)',
+          'Dokumentasi Foto & Video Cinematic',
           'Dokumen Administrasi Lengkap (SPH, e-Faktur Pajak)'
         ],
         itinerary: [
-          { time: '08.00 - 08.30 WIB', title: 'Opening & Energizer Session', desc: 'Penyambutan peserta karyawan, doa bersama, dan pemanasan penyemat semangat kerja.' },
-          { time: '08.30 - 11.30 WIB', title: 'Synergy & Effective Communication Games', desc: 'Simulasi *problem solving* yang menekankan pentingnya komunikasi lintas divisi.' },
-          { time: '11.30 - 13.00 WIB', title: 'Lunch & Relaxation', desc: 'Makan siang prasmanan lezat, waktu beribadah, dan istirahat.' },
-          { time: '13.00 - 15.00 WIB', title: 'Big Synergy Challenge (Project Simulasi)', desc: 'Simulasi besar eksekusi target perusahaan secara bersama-sama.' },
-          { time: '15.00 - 15.30 WIB', title: 'Debrief & Commitment Building', desc: 'Refleksi nilai pembelajaran untuk diimplementasikan di lingkungan kerja nyata.' }
+          { time: '08.00 - 08.30 WIB', title: 'Opening Ceremony & High Energy Warm-Up', desc: 'Penyambutan jajaran manajemen & karyawan, doa pembuka, penjelasan *safety briefing*, serta sesi pemanasan interaktif pembakar semangat kerja.' },
+          { time: '08.30 - 11.30 WIB', title: 'Synergy Building & High Impact Teamwork', desc: 'Simulasi problem solving yang berfokus pada penghancuran *silo mentality*, penguatan komunikasi interdivisi, dan penyelarasan visi misi perusahaan.' },
+          { time: '11.30 - 13.00 WIB', title: 'Executive Lunch & Networking Relax', desc: 'Sesi istirahat makan siang prasmanan kuliner khas resto Batu, ibadah, serta waktu luang mempererat jaringan relasi antar rekan kerja.' },
+          { time: '13.00 - 15.00 WIB', title: 'Grand Corporate Strategy Simulation', desc: 'Game puncak komprehensif membutuhkan alokasi sumber daya tepat, eksekusi cepat, dan strategi adaptif guna mencapai target bersama perusahaan.' },
+          { time: '15.00 - 15.30 WIB', title: 'Executive Debrief & Organizational Commitment', desc: 'Refleksi mendalam oleh Master Trainer menghubungkan dinamika game dengan situasi nyata di kantor, penandatanganan komitmen, dan penutupan.' }
         ]
       },
       'rafting': {
@@ -1076,25 +1472,29 @@
         location: 'Sungai Batu / Kasembon',
         duration: '3 - 4 Jam',
         capacity: '10 - 200 Peserta',
-        img: 'assets/img/paketarungjeram.webp',
+        img: 'assets/img/paket-outbound-rafting-kasembon-batu-malang.webp',
         desc: 'Petualangan menguji keberanian dan kerja sama tim menyusuri arus sungai di Kota Batu. Dilengkapi standar keselamatan internasional dan didampingi *skipper* profesional.',
-        fac1: [
+        gallery: [
+          { src: 'assets/img/paket-combo-rafting-dan-outbound-kasembon-malang.webp', caption: 'Sensasi Jeram Kasembon Batu' },
+          { src: 'assets/img/paket-outbound-rafting-kasembon-batu-malang.webp', caption: 'Peralatan Safety Gear Lengkap' },
+          { src: 'assets/img/sensasi-outbound-rafting-arung-jeram-malang.webp', caption: 'Keseruan Arung Jeram Rombongan' },
+          { src: 'assets/img/peralatan-keselamatan-outbound.webp', caption: 'Standar Safety Skipper BNSP' }
+        ],
+        facilities: [
           'Pengarungan Sungai Arus Deras 7 - 12 KM',
           'Safety Gear Standards (Pelampung CE, Helm, Dayung)',
-          'River Guide (*Skipper*) Sertifikasi & Tim Rescue',
-          'Shuttle Transport Lokal dari Basecamp ke Start Point'
-        ],
-        fac2: [
+          'River Guide (Skipper) Sertifikasi & Tim Rescue',
+          'Shuttle Transport Lokal Basecamp ke Start Point',
           'Sajian Kelapa Muda Fresh & Snack Rest Point',
           'Makan Siang Prasmanan Khas Pedesaan',
           'Fasilitas Ruang Bilas, Shower & Toilet Clean',
           'Asuransi Perlindungan Peserta Rafting'
         ],
         itinerary: [
-          { time: '08.00 - 08.30 WIB', title: 'Registrasi & Safety Briefing', desc: 'Pengisian form keselamatan, instruksi instruktur, dan pemakaian alat keselamatan.' },
-          { time: '08.30 - 11.00 WIB', title: 'Pengarungan Arung Jeram', desc: 'Menaklukkan jeram-jeram menantang sepanjang alur sungai.' },
-          { time: '11.00 - 11.30 WIB', title: 'Rest Point & Kelapa Muda', desc: 'Istirahat sejenak di tepi sungai sambil menikmati segarnya kelapa muda murni.' },
-          { time: '11.30 - 13.00 WIB', title: 'Bilas & Makan Siang', desc: 'Membersihkan diri di shower dan menikmati santapan makan siang hangat.' }
+          { time: '08.00 - 08.30 WIB', title: 'Registrasi Basecamp & Safety Fitting Equipment', desc: 'Tiba di basecamp rafting, registrasi ulang, fitting peralatan keselamatan standar internasional (helm & pelampung), dan pembagian perahu.' },
+          { time: '08.30 - 11.00 WIB', title: 'Pengarungan Sungai Arus Deras (Rafting Expedition)', desc: 'Sensasi pengarungan sungai sejauh 7-12 km melewati jeram-jeram menantang, tebing batu eksotis, dan air terjun dipandu *skipper* sertifikasi.' },
+          { time: '11.00 - 11.30 WIB', title: 'Rest Point Tebing & Fresh Coconut Drink', desc: 'Istirahat sejenak di *rest point* tengah sungai, menikmati sajian minuman kelapa muda segar, serta foto bersama berlatar pemandangan tebing.' },
+          { time: '11.30 - 13.00 WIB', title: 'Bilas Bersih, Lunch Prasmanan & Kepulangan', desc: 'Kembali ke basecamp via shuttle lokal, membersihkan diri di ruang mandi bersih, dilanjutkan makan siang masakan pedesaan yang lezat.' }
         ]
       },
       'paintball': {
@@ -1107,24 +1507,28 @@
         location: 'Hutan Pinus / Arena Batu',
         duration: '2 - 3 Jam',
         capacity: '12 - 100 Peserta',
-        img: 'assets/img/paketpaintball.webp',
+        img: 'assets/img/kegiatan-team-building-hutan-pinus-poncokusumo.webp',
         desc: 'Simulasi tempur taktis outdoor di antara pepohonan pinus. Melatih kecepatan berpikir, eksekusi strategi kelompok, serta komunikasi bawah tekanan.',
-        fac1: [
+        gallery: [
+          { src: 'assets/img/kegiatan-team-building-hutan-pinus-poncokusumo.webp', caption: 'Arena Battle Ground Pinus' },
+          { src: 'assets/img/peralatan-keselamatan-outbound.webp', caption: 'Marker & Goggle Anti Fog' },
+          { src: 'assets/img/keselamatan-outbound-malang.webp', caption: 'Safety Briefing & Marshal' },
+          { src: 'assets/img/rekomendasi-game-outbound-team-building-seru-batu.webp', caption: 'Taktis Battle Scenarios' }
+        ],
+        facilities: [
           'Senjata Paintball Marker Semi Otomatis',
           '50 Peluru Cat / Bullet per Peserta',
-          'Masker Pelindung Wajah & Mata (*Goggle Anti-Fog*)',
-          'Seragam Loreng / Camo Safety Tactical'
-        ],
-        fac2: [
+          'Masker Pelindung Wajah & Mata (Goggle Anti-Fog)',
+          'Seragam Loreng / Camo Safety Tactical',
           'Wasit, Instruktur & Marshal Lapangan',
           'Sewa Arena Battle Ground Hutan Pinus',
           'Air Mineral Peserta',
           'P3K & Perlindungan Keselamatan'
         ],
         itinerary: [
-          { time: '09.00 - 09.30 WIB', title: 'Briefing Aturan Main & Safety', desc: 'Penjelasan tata cara pengisian gas, sistem pengaman senjata, dan aturan zona aman.' },
-          { time: '09.30 - 11.30 WIB', title: 'Skenario Pertempuran Taktis', desc: 'Sesi kompetisi: Mode Terminator, Rebut Bendera Lawan, dan Defend the Fort.' },
-          { time: '11.30 - 12.00 WIB', title: 'Pengumuman Pemenang & Foto', desc: 'Penghitungan poin skor pertempuran dan foto kemenangan bersama.' }
+          { time: '09.00 - 09.30 WIB', title: 'Safety Briefing & Gun Orientation', desc: 'Pembagian seragam loreng dan goggle anti-fog, orientasi cara kerja senjata marker semi-otomatis, serta pemahaman aturan zona aman pertempuran.' },
+          { time: '09.30 - 11.30 WIB', title: 'Tactical Battle Scenarios (Elimination & Flag Capture)', desc: 'Pertempuran taktis sengit di arena hutan pinus mencakup babak *Terminator/Elimination Game*, *Capture the Flag*, dan *VIP Protection*.' },
+          { time: '11.30 - 12.00 WIB', title: 'Battle Evaluation, Victory Award & Closing', desc: 'Penghitungan sisa amunisi dan poin kemenangan per pertempuran, penyerahan sebutan tim terbaik, serta foto bersama dengan kostum tempur lengkap.' }
         ]
       },
       'family': {
@@ -1137,25 +1541,29 @@
         location: 'Resort / Taman Rekreasi Batu',
         duration: '1 Hari Full Day',
         capacity: '30 - 500 Peserta',
-        img: 'assets/img/paketfamily.webp',
+        img: 'assets/img/persiapan-wajib-event-family-gathering-perusahaan-batu.webp',
         desc: 'Paket kebersamaan spesial untuk keluarga besar perusahaan, instansi, atau alumni. Menampilkan permainan ramah anak dan dewasa yang santai, gembira, dan penuh hadiah.',
-        fac1: [
-          'Fun Family Games Segala Usia (Anak, Dewasa, Pasangan)',
+        gallery: [
+          { src: 'assets/img/persiapan-wajib-event-family-gathering-perusahaan-batu.webp', caption: 'Family Gathering Ceria' },
+          { src: 'assets/img/permainan-keluarga-outbound-batu.webp', caption: 'Fun Games Ramah Keluarga' },
+          { src: 'assets/img/permainan-outbound-anak-batu.webp', caption: 'Kegiatan Outbound Kategori Anak' },
+          { src: 'assets/img/kegiatan-fun-games-outbound-taman-kemesraan-pujon.webp', caption: 'Gathering Taman Kemesraan Pujon' }
+        ],
+        facilities: [
+          'Fun Family Games Segala Usia (Anak, Dewasa)',
           'MC / Host Acara Profesional & Energik',
           'Panggung Utama, Sound System & Backdrop Custom',
-          'Sewa Area Outbound Rumput Luas & Gazebo Santai'
-        ],
-        fac2: [
+          'Sewa Area Outbound Rumput Luas & Gazebo',
           'Makan Siang Prasmanan & Coffee Break 1x',
           'Doorprize Fun & Souvenir Hadiah Permainan',
           'Pengisi Acara Musik / Electone (Optional)',
           'Dokumentasi Foto & Video Acara'
         ],
         itinerary: [
-          { time: '08.30 - 09.00 WIB', title: 'Kedatangan & Welcome Drink', desc: 'Penyambutan ramah rombongan keluarga dan pengondisian tempat.' },
-          { time: '09.00 - 11.30 WIB', title: 'Fun Family Games', desc: 'Lomba-lomba gembira antar keluarga dan anak-anak penuh gelak tawa.' },
-          { time: '11.30 - 13.00 WIB', title: 'Makan Siang & Hiburan Musik', desc: 'Santap siang bersama keluarga diiringi hiburan musik interaktif.' },
-          { time: '13.00 - 14.30 WIB', title: 'Pengundian Doorprize & Closing', desc: 'Sesi penarikan undian hadiah utama perusahaan dan foto bersama.' }
+          { time: '08.30 - 09.00 WIB', title: 'Welcome Reception & Family Gathering Opening', desc: 'Penyambutan seluruh anggota keluarga besar, pembagian nametag peserta, snack pagi, serta pembukaan ceria oleh MC profesional.' },
+          { time: '09.00 - 11.30 WIB', title: 'Fun Family Outdoor Games (Anak & Dewasa)', desc: 'Aneka lomba dan permainan kebersamaan interaktif yang aman untuk semua tingkatan usia, mulai dari kategori anak-anak hingga pasangan dewasa.' },
+          { time: '11.30 - 13.00 WIB', title: 'Family Banquet Lunch & Entertainment', desc: 'Nikmati sajian makan siang prasmanan keluarga diiringi alunan hiburan musik live, memberi ruang bersantai dan beramah tamah.' },
+          { time: '13.00 - 14.30 WIB', title: 'Grand Doorprize Draw & Farewell Session', desc: 'Sesi pengundian hadiah utama (*doorprize*), pembagian bingkisan souvenir untuk seluruh peserta anak, dan penutupan acara.' }
         ]
       },
       'funoutbound': {
@@ -1168,24 +1576,28 @@
         location: 'Taman Rekreasi / Lapangan',
         duration: 'Half Day (3 - 4 Jam)',
         capacity: '40 - 500 Peserta',
-        img: 'assets/img/paketfunoutbound.webp',
+        img: 'assets/img/panduan-outbound-edukasi-anak-di-pujon-kabupaten-malang.webp',
         desc: 'Program rekreasi aktif outdoor untuk agenda *classmeet*, kelulusan, atau rekreasi sekolah. Dipandu fasilitator yang sabar dan komunikatif.',
-        fac1: [
+        gallery: [
+          { src: 'assets/img/panduan-outbound-edukasi-anak-di-pujon-kabupaten-malang.webp', caption: 'Edukasi Outbound Anak Pujon' },
+          { src: 'assets/img/panduan-outbound-edukasi-anak-di-turen-kabupaten-malang.webp', caption: 'Fun Games Edukatif Sekolah' },
+          { src: 'assets/img/permainan-outbound-anak-batu.webp', caption: 'Keceriaan Siswa di Lapangan' },
+          { src: 'assets/img/kegiatan-fun-games-outbound-taman-kemesraan-pujon.webp', caption: 'Outbound Classmeet & Kelulusan' }
+        ],
+        facilities: [
           'Ice Breaking & Teamwork Fun Games Edukatif',
           'Fasilitator Ramah Anak, Sabar & Energik',
           'Sound System Outdoor Portabel',
-          'Peralatan Game Ringan & Aman'
-        ],
-        fac2: [
+          'Peralatan Game Ringan & Aman',
           'Air Mineral Peserta',
           'Banner / Spanduk Kegiatan Sekolah',
           'Tim Pertolongan Pertama (P3K)',
           'Foto Dokumentasi Kegiatan'
         ],
         itinerary: [
-          { time: '07.30 - 08.00 WIB', title: 'Kumpul & Pemanasan', desc: 'Baris-berbaris dan game penyemangat pagi di arena.' },
-          { time: '08.00 - 10.30 WIB', title: 'Pos-Pos Permainan Edukatif', desc: 'Rotasi permainan ketangkasan motorik, kekompakan, dan komunikasi.' },
-          { time: '10.30 - 11.00 WIB', title: 'Game Puncak & Penutupan', desc: 'Permainan raksasa bersama dan pembagian apresiasi juara pos.' }
+          { time: '07.30 - 08.00 WIB', title: 'Pengondisian Siswa & Pemanasan Pagi', desc: 'Pengelompokan siswa berdasarkan kelas, pemeriksaan kehadiran oleh bapak/ibu guru, dan senam keceriaan pagi bersama kakak fasilitator.' },
+          { time: '08.00 - 10.30 WIB', title: 'Rotasi Pos Permainan Ketangkasan & Kekompakan', desc: 'Peserta bergerak mengelilingi pos-pos permainan edukatif yang melatih konsentrasi, kedisiplinan, kelincahan, dan kerja sama tim.' },
+          { time: '10.30 - 11.00 WIB', title: 'Big Water Game Challenge & Penutupan', desc: 'Game puncak basah-basahan gembira yang menguji kekompakan seluruh angkatan siswa, penyerahan apresiasi kelompok terbaik, dan foto bersama.' }
         ]
       },
       'pantai': {
@@ -1200,25 +1612,29 @@
         capacity: '20 - 500 Peserta',
         img: 'assets/img/outbound-pantai-nginap-bonfire.webp',
         desc: 'Program Outbound Pantai Malang dirancang untuk menghadirkan suasana penyegaran yang estetik sekaligus membangun kekompakan tim di atas pasir pesisir Selatan Malang (Balekambang, Ungapan, Tiga Warna, Batu Bengkung).',
-        fac1: [
+        gallery: [
+          { src: 'assets/img/Tim-kantor-mengikuti-outbound-sunrise-di-tepi-pantai.webp', caption: 'Outbound Sunrise Pantai Malang' },
+          { src: 'assets/img/kegiatan-family-gathering-pantai-malang-selatan.webp', caption: 'Gathering Pasir Putih Beach' },
+          { src: 'assets/img/simulasi-outbound-pantai-malang.webp', caption: 'Simulasi Beach Fun Games' },
+          { src: 'assets/img/kegiatan-team-building-pantai-goa-china-malang.webp', caption: 'Team Building Pantai Goa Cina' }
+        ],
+        facilities: [
           'Trainer & Fasilitator Pantai Berpengalaman',
           'Tiket Masuk & Perizinan Ground Pantai Malang',
           'Peralatan Beach Fun Games Complete Set',
-          'Sound System Outdoor & Banner Spanduk'
-        ],
-        fac2: [
+          'Sound System Outdoor & Banner Spanduk',
           'Air Mineral Refill / Fresh Drink Sesi Pantai',
           'Peralatan Safety Standar Pesisir (P3K)',
           'Dokumentasi Foto & Video Acara (Google Drive)',
           'Opsi Tambahan Menu Konsumsi Seafood Fresh'
         ],
         itinerary: [
-          { time: '06.00 - 08.30 WIB', title: 'Perjalanan ke Pantai', desc: 'Perjalanan rombongan menuju kawasan pantai Malang Selatan.' },
-          { time: '08.30 - 09.00 WIB', title: 'Kedatangan & Registrasi', desc: 'Tiba di lokasi pantai, istirahat sejenak dan pembagian kelompok.' },
-          { time: '09.00 - 11.30 WIB', title: 'Beach Fun Games & Team Building', desc: 'Permainan kekompakan dan strategi di atas hamparan pasir pesisir.' },
-          { time: '11.30 - 13.30 WIB', title: 'ISHOMA & Makan Siang Pesisir', desc: 'Makan siang kuliner laut dan waktu santai di gazebo pantai.' },
-          { time: '13.30 - 15.00 WIB', title: 'Final Challenge & Acara Bebas', desc: 'Game puncak kebersamaan dan sesi foto estetik tepi laut.' },
-          { time: '15.00 - 15.30 WIB', title: 'Debrief & Kepulangan', desc: 'Penyampaian refleksi pembelajaran dan perjalanan kembali.' }
+          { time: '06.00 - 08.30 WIB', title: 'Perjalanan Rombongan Menuju Pesisir Selatan', desc: 'Perjalanan menyenangkan bersama rombongan dari titik kumpul menuju kawasan pantai pasir putih eksotis Malang Selatan.' },
+          { time: '08.30 - 09.00 WIB', title: 'Kedatangan, Orientasi Area & Fresh Drink', desc: 'Tiba di lokasi pantai, istirahat sejenak menikmati angin laut, pembagian tempat bersantai gazebo, serta pembagikan kelompok.' },
+          { time: '09.00 - 11.30 WIB', title: 'Beach Team Building & Coastal Competition', desc: 'Rangkaian permainan interaktif di atas pasir pantai mencakup *Sand Building*, *Beach Volley Fun*, dan *Water Relay Challenge*.' },
+          { time: '11.30 - 13.30 WIB', title: 'ISHOMA & Santap Kuliner Seafood Fresh', desc: 'Makan siang prasmanan lezat dengan hidangan laut segar khas pesisir pantai, dilanjutkan waktu istirahat dan ibadah.' },
+          { time: '13.30 - 15.00 WIB', title: 'Final Beach Challenge & Esthetic Photo Session', desc: 'Game puncak kebersamaan seluruh peserta, dilanjutkan sesi dokumentasi foto & video estetik menggunakan kacamata pantai/properti.' },
+          { time: '15.00 - 15.30 WIB', title: 'Debriefing Nilai Kebersamaan & Perjalanan Pulang', desc: 'Sesi ulasan pesan kebersamaan dari Master Trainer, pembersihan mandiri di fasilitas bilas pantai, dan persiapan perjalanan kembali.' }
         ]
       }
     };
@@ -1254,7 +1670,7 @@
 
       const data = packageDatabase[pkgType] || packageDatabase['pantai'];
 
-      // Menentukan Ekstensi File yang Sedang Digunakan (.html atau tanpa ekstensi)
+      // Menentukan Ekstensi File yang Sedang Digunakan
       const currentFileName = window.location.pathname.endsWith('.html') ? 'detail-paket.html' : 'detail-paket';
 
       // Render Dynamic Meta Tags
@@ -1347,32 +1763,71 @@
       document.getElementById('pkg-img').src = data.img;
       document.getElementById('pkg-img').alt = `${data.name} Jasa Outbound Malang Batu`;
       
-      // Render Tanda Bintang (*)
+      // Render Deskripsi
       document.getElementById('pkg-desc').innerHTML = parseStarText(data.desc);
 
-      // Render Fasilitas Included 1
-      const fac1Container = document.getElementById('pkg-facilities-1');
-      fac1Container.innerHTML = '';
-      data.fac1.forEach(item => {
-        fac1Container.innerHTML += `<li><i class="bi bi-check2 me-2 fw-bold" style="color: var(--primary-color);"></i> ${parseStarText(item)}</li>`;
+      // RENDER FASILITAS MEMANJANG MERATA
+      const facGridContainer = document.getElementById('pkg-facilities-grid');
+      facGridContainer.innerHTML = '';
+      data.facilities.forEach(item => {
+        const iconClass = getFacilityBootstrapIcon(item);
+        facGridContainer.innerHTML += `
+          <div class="col-md-6 col-lg-3">
+            <div class="facility-item-card">
+              <div class="facility-icon-wrapper">
+                <i class="bi ${iconClass}"></i>
+              </div>
+              <span class="small text-dark fw-semibold align-self-center" style="line-height: 1.4;">${parseStarText(item)}</span>
+            </div>
+          </div>
+        `;
       });
 
-      // Render Fasilitas Included 2
-      const fac2Container = document.getElementById('pkg-facilities-2');
-      fac2Container.innerHTML = '';
-      data.fac2.forEach(item => {
-        fac2Container.innerHTML += `<li><i class="bi bi-check2 me-2 fw-bold" style="color: var(--primary-color);"></i> ${parseStarText(item)}</li>`;
+      // RENDER GALERI FOTO KEGIATAN (4 FOTO SPESIFIK DETAIL PAKET)
+      const galleryGridContainer = document.getElementById('pkg-gallery-grid');
+      galleryGridContainer.innerHTML = '';
+      
+      const galleryItems = data.gallery || [
+        { src: 'assets/img/kegiatan-outbound-team-building-kabupaten-malang.webp', caption: 'Dokumentasi Outbound Malang' },
+        { src: 'assets/img/rekomendasi-game-outbound-team-building-seru-batu.webp', caption: 'Kebersamaan & Fun Games' },
+        { src: 'assets/img/keselamatan-outbound-malang.webp', caption: 'Fasilitator BNSP Pro' },
+        { src: 'assets/img/kekompakan-pegawai-outbound.webp', caption: 'Simulasi Teamwork' }
+      ];
+
+      galleryItems.forEach(item => {
+        galleryGridContainer.innerHTML += `
+          <div class="col-6 col-md-3">
+            <div class="package-gallery-card shadow-sm">
+              <a href="${item.src}" class="glightbox" data-gallery="pkg-gallery" data-title="${item.caption}">
+                <img src="${item.src}" class="package-gallery-img" alt="${item.caption}" loading="lazy">
+                <div class="package-gallery-overlay">
+                  <span class="text-white small fw-bold"><i class="bi bi-zoom-in me-1"></i> ${item.caption}</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        `;
       });
 
-      // Render Itinerary Timeline
-      const itinContainer = document.getElementById('pkg-itinerary');
+      // Inisialisasi GLightbox jika tersedia
+      if (typeof GLightbox !== 'undefined') {
+        GLightbox({ selector: '.glightbox' });
+      }
+
+      // RENDER RUNDOWN VERTICAL TIMELINE
+      const itinContainer = document.getElementById('pkg-itinerary-container');
       itinContainer.innerHTML = '';
-      data.itinerary.forEach(step => {
+      data.itinerary.forEach((step) => {
         itinContainer.innerHTML += `
-          <div class="itinerary-item">
-            <span class="fw-bold" style="color: var(--primary-color); font-size: 0.88rem;">${step.time}</span>
-            <h3 class="fw-bold mt-1" style="font-size: 0.98rem; margin-bottom: 4px;">${step.title}</h3>
-            <p class="small text-muted mb-0" style="line-height: 1.5;">${parseStarText(step.desc)}</p>
+          <div class="rundown-timeline-item">
+            <div class="rundown-time-badge">
+              <i class="bi bi-clock me-1"></i> ${step.time}
+            </div>
+            <div class="timeline-dot"></div>
+            <div class="rundown-content-body">
+              <h4 class="fw-bold text-dark fs-6 mb-1">${step.title}</h4>
+              <p class="small text-muted mb-0" style="font-size: 0.88rem; line-height: 1.5;">${parseStarText(step.desc)}</p>
+            </div>
           </div>
         `;
       });
