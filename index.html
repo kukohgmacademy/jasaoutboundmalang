@@ -459,6 +459,69 @@
       transform: translateY(-2px);
     }
 
+    /* Hero CTA: dua tombol sama besar, selalu bersebelahan */
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: stretch;
+      gap: 12px;
+      max-width: 480px;
+    }
+
+    .hero-cta-btn {
+      flex: 1 1 0;
+      min-width: 0;
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.2;
+      text-align: center;
+      white-space: nowrap;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    .hero-cta-primary {
+      background-color: var(--accent-color);
+      color: #ffffff !important;
+      border: 1px solid var(--accent-color);
+      box-shadow: 0 4px 14px rgba(128, 0, 0, 0.3);
+    }
+
+    .hero-cta-primary:hover {
+      background-color: var(--accent-hover);
+      border-color: var(--accent-hover);
+      color: #ffffff !important;
+      transform: translateY(-2px);
+    }
+
+    .hero-cta-outline {
+      background-color: transparent;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.75);
+    }
+
+    .hero-cta-outline:hover {
+      background-color: #ffffff;
+      color: var(--primary-color) !important;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 575px) {
+      .hero-cta-group { gap: 8px; max-width: 100%; }
+      .hero-cta-btn { min-height: 46px; padding: 10px 8px; font-size: 0.8rem; gap: 5px; }
+    }
+
+    @media (max-width: 359px) {
+      .hero-cta-btn { font-size: 0.72rem; padding: 10px 6px; gap: 4px; }
+    }
+
     /* Hero Section */
     .hero-section {
       position: relative;
@@ -922,10 +985,10 @@
             <span class="hero-badge mb-3"><i class="bi bi-tree-fill me-1"></i> Jasa Outbound Malang & Batu Terpercaya</span>
             <h1 class="hero-title">Jasa Outbound Malang & Batu Terpercaya #1</h1>
             <p class="hero-subtitle mb-4">Solusi profesional untuk kegiatan Team Building Perusahaan, Capacity Building, LDKS Sekolah, Makrab Mahasiswa, hingga Rafting & Jeep Tour di Malang & Kota Batu. Program dirancang penuh sinergi, mempererat kebersamaan, dan fleksibel sesuai budget Anda.</p>
-            <div class="d-flex flex-wrap gap-2 gap-sm-3">
-              <a href="paket.html" class="btn-custom-accent text-decoration-none">Pilih Paket Populer <i class="bi bi-arrow-right ms-1"></i></a>
-              <a href="https://wa.me/6282211221909?text=Halo%20Admin,%20saya%20mau%20konsultasi%20kegiatan%20outbound" target="_blank" class="btn btn-outline-light rounded-pill px-3 px-sm-4 py-2 fw-bold d-inline-flex align-items-center" style="font-size: 0.9rem;">
-                <i class="bi bi-chat-dots-fill me-2" style="color: #FF8080;"></i> Konsultasi Gratis
+            <div class="hero-cta-group">
+              <a href="paket.html" class="hero-cta-btn hero-cta-primary text-decoration-none">Paket Populer <i class="bi bi-arrow-right"></i></a>
+              <a href="https://wa.me/6282211221909?text=Halo%20Admin,%20saya%20mau%20konsultasi%20kegiatan%20outbound" target="_blank" class="hero-cta-btn hero-cta-outline text-decoration-none">
+                <i class="bi bi-chat-dots-fill" style="color: #FF8080;"></i> Konsultasi Gratis
               </a>
             </div>
           </div>

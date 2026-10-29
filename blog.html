@@ -243,6 +243,71 @@
       opacity: 1;
       visibility: visible;
     }
+
+    /* Search bar */
+    .blog-search-form {
+      display: flex;
+      align-items: stretch;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .blog-search-box {
+      position: relative;
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .blog-search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #64748B;
+      font-size: 1rem;
+      pointer-events: none;
+    }
+
+    .blog-search-input {
+      width: 100%;
+      height: 100%;
+      min-height: 50px;
+      padding: 0 18px 0 46px;
+      border: 2px solid #E2E8F0;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-family: var(--body-font);
+      color: var(--text-dark);
+      background: #ffffff;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .blog-search-input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 4px rgba(0, 0, 128, 0.10);
+    }
+
+    .blog-search-btn {
+      flex: 0 0 auto;
+      min-height: 50px;
+      padding: 0 28px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 575px) {
+      .blog-search-form { gap: 8px; }
+      .blog-search-input { min-height: 46px; padding: 0 14px 0 40px; font-size: 0.88rem; }
+      .blog-search-icon { left: 15px; font-size: 0.9rem; }
+      .blog-search-btn { min-height: 46px; padding: 0 16px; font-size: 0.88rem; }
+      .blog-search-btn i { margin-right: 0 !important; }
+      .blog-search-btn span { display: none; }
+    }
   </style>
 </head>
 
@@ -305,14 +370,29 @@
     <section id="blog-posts" class="section py-5">
       <div class="container">
 
-        <div class="row mb-4 justify-content-center text-center">
-          <div class="col-lg-8">
-            <h2 class="fw-bold" style="color: var(--primary-color);">Seluruh Artikel seputaran Outbound</h2>
-            <p class="text-muted small">Wawasan eksklusif mengenai lokasi outbound terbaik di Malang Batu, efisiensi anggaran perusahaan, paket rafting Kasembon, LDKS sekolah, hingga gathering bertema budaya.</p>
+        <!-- Fitur Pencarian Artikel -->
+        <div class="row mb-4 justify-content-center">
+          <div class="col-lg-8 col-xl-7">
+            <form id="blog-search-form" class="blog-search-form" role="search" autocomplete="off">
+              <div class="blog-search-box">
+                <i class="bi bi-search blog-search-icon" aria-hidden="true"></i>
+                <input type="search" id="blog-search-input" class="blog-search-input" placeholder="Cari artikel outbound, rafting, LDKS, gathering..." aria-label="Cari artikel">
+              </div>
+              <button type="submit" class="btn-custom-accent blog-search-btn">
+                <i class="bi bi-search me-2"></i><span>Cari</span>
+              </button>
+            </form>
+            <p id="blog-search-info" class="text-muted small text-center mt-3 mb-0" aria-live="polite"></p>
           </div>
         </div>
 
-        <div class="row g-4 justify-content-center">
+        <div id="blog-no-result" class="text-center py-5" style="display: none;">
+          <i class="bi bi-search" style="font-size: 2.5rem; color: var(--primary-color); opacity: .5;"></i>
+          <h5 class="fw-bold mt-3" style="color: var(--primary-color);">Artikel tidak ditemukan</h5>
+          <p class="text-muted small mb-0">Coba gunakan kata kunci lain, misalnya "rafting", "LDKS", atau "pantai".</p>
+        </div>
+
+        <div id="blog-grid" class="row g-4 justify-content-center">
 
 <!-- FASILITATOR OUTBOUND MALANG: PERAN DAN CARA MEMILIH -->
 <div class="col-lg-4 col-md-6">
@@ -3263,6 +3343,46 @@
           this.classList.toggle('bi-list');
           this.classList.toggle('bi-x');
         });
+      }
+
+      // Fitur pencarian artikel
+      const searchForm = document.getElementById('blog-search-form');
+      const searchInput = document.getElementById('blog-search-input');
+      const searchInfo = document.getElementById('blog-search-info');
+      const noResult = document.getElementById('blog-no-result');
+      const grid = document.getElementById('blog-grid');
+
+      if (searchForm && searchInput && grid) {
+        const items = Array.from(grid.children).filter(function(el) {
+          return el.querySelector('article');
+        });
+        const normalize = function(s) {
+          return (s || '').toLowerCase().replace(/\s+/g, ' ').trim();
+        };
+        const index = items.map(function(el) {
+          return normalize(el.textContent + ' ' + (el.querySelector('img') ? el.querySelector('img').alt : ''));
+        });
+
+        const runSearch = function() {
+          const terms = normalize(searchInput.value).split(' ').filter(Boolean);
+          let shown = 0;
+          items.forEach(function(el, i) {
+            const match = terms.every(function(t) { return index[i].indexOf(t) !== -1; });
+            el.style.display = match ? '' : 'none';
+            if (match) shown++;
+          });
+          noResult.style.display = shown === 0 ? 'block' : 'none';
+          searchInfo.textContent = terms.length
+            ? (shown + ' artikel ditemukan untuk "' + searchInput.value.trim() + '"')
+            : '';
+        };
+
+        searchForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          runSearch();
+          searchInput.blur();
+        });
+        searchInput.addEventListener('input', runSearch);
       }
 
       const scrollTopBtn = document.getElementById('scroll-top');
